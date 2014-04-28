@@ -12,7 +12,7 @@ feature 'Players' do
     fill_in :player_twitter, with: "imjamescook"
     click_button "Register"
 
-    expect(page).to have_content "Thanks for registering!"
+    expect(page).to have_content "A message with a confirmation link has been sent to your Funding Circle email address. Please open the link to activate your account."
   end
 
 end
