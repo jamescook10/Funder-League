@@ -15,7 +15,55 @@ describe Player do
   end
 
   describe "validations" do
+
+    subject { create(:player) }
     
+    describe 'first name' do
+
+      context 'when blank' do
+        it 'is not valid' do
+          subject.first_name = ""
+          expect(subject).to_not be_valid
+        end
+      end
+
+      context 'when not blank' do
+        it 'is valid' do
+          expect(subject).to be_valid
+        end
+      end
+    end
+
+    describe 'last name' do
+      context 'when blank' do
+        it 'is valid' do
+          subject.last_name = ""
+          expect(subject).to be_valid
+        end
+      end
+
+      context 'when not blank' do
+        it 'is valid' do
+          expect(subject).to be_valid
+        end
+      end
+    end
+
+    describe 'email' do
+      context 'when it ends in fundingcircle.com' do
+        it 'is valid' do
+          expect(subject).to be_valid
+        end
+      end
+
+      context 'when it does not end in fundingcircle.com' do
+        it 'is not valid' do
+          subject.email = "shjohnson@me.com"
+          expect(subject).to_not be_valid
+        end
+      end
+    end
+
   end
   
 end

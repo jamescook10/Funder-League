@@ -3,4 +3,6 @@ class Player < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :confirmable, :registerable,
          :recoverable, :rememberable, :validatable, :lockable
+
+  validates :first_name, presence: true
 end
