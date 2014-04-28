@@ -3,13 +3,6 @@ require 'spec_helper'
 describe DashboardController do
 
   describe "GET 'show'" do
-    it "returns http success" do
-      get 'show'
-      response.should be_success
-    end
-  end
-
-  describe "#show" do
     it 'redirects to a login page if there is no player signed in' do
       get :show
       expect(response).to redirect_to new_player_session_path
