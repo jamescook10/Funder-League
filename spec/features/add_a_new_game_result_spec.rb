@@ -10,6 +10,7 @@ feature 'Games' do
 
     fill_in :player_email, with: "sam.johnson@fundingcircle.com"
     fill_in :player_password, with: "password"
+    click_button "Sign in"
 
     fill_in :game_opponent, with: "James Cook"
     fill_in :game_player_score, with: 2
