@@ -1,3 +1,15 @@
 <h1><%#= pluralize(@player.name) %> Dashboard</h1>
 
-<%#= form_for @
+<%=# form_for @
+
+<div><%=# f.label :opponent %><br />
+<%=# f.text_field :opponent %></div>
+
+<div><%=# f.label :player_score %><br />
+<%=# f.text_field :player_score %></div>
+
+<div><%=# f.label :opponent_score %><br />
+<%=# f.text_field :opponent_score %></div>
+
+<div><%=# f.label :player_email %><br />
+<%=# f.select :player_email %></div>
