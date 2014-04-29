@@ -1,5 +1,7 @@
 class GamesController < ApplicationController
 
+  before_action :authenticate_player!
+
   def create
     @game = Game.new(game_params, :player_id => current_player.id)
     if @game.valid?
