@@ -3,6 +3,12 @@ require 'spec_helper'
 describe GamesController do
 
   let(:fifa) { create(:game_type) }
+  let(:sam) { create(:player) }
+  let(:james) { create(:opponent) }
+
+  before do
+    sign_in sam
+  end
   
   describe "#create" do
     
