@@ -20,28 +20,22 @@ describe GamesController do
       end
 
       context "and a game is created successfully" do
-
         it "redirects to the dashboard" do
           post :create, { game: { game_type_id: fifa.id, player_score: 1, opponent_score: 2, opponent_id: james.id } }
           expect(response).to redirect_to dashboard_path
         end
-
       end
 
       context "and there are errors when trying to create a game" do
-        
         it "renders the dashboard" do
           post :create, { game: { game_type_id: fifa.id, player_score: 1, opponent_score: 2, opponent_id: james.id } }
           expect(response).to render_template "dashboard/show"
         end
-
-      end
-
-      
+      end      
     end
 
     context "when a player isn't signed in" do
-
+      
       it "redirects to the login page" do
         post :create, { game: { game_type_id: fifa.id, player_score: 1, opponent_score: 2, opponent_id: james.id } }
         expect(response).to redirect_to new_player_session_path
