@@ -1,2 +1,22 @@
 <h1><%= @player.possessive_form(@player.first_name) %> Dashboard</h1>
 
+<%= form_for @game, html: { role: "form" } do |f| %>
+
+  <% if @game.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@game.errors.count, "error") %>
+        prohibited this post from being saved:</h2>
+
+        <ul>
+          <%= @game.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+        </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :opponent, "Auction title" %>
+    <%= f.text_field :title, placeholder: "Enter an auction title", class: 'form-control' %>
+  </div>
+
