@@ -1,9 +1,15 @@
 class GamesController < ApplicationController
 
+  before_action :authenticate_player!
+
   def create
-    game = Game.new(game_params)
-    game.save
-    redirect_to dashboard_path
+    @game = Game.new(game_params, :player_id => current_player.id)
+    if @game.valid?
+      @game.save
+      redirect_to dashboard_path
+    else
+      render "dashboard/show"
+    end
   end
 
   private
