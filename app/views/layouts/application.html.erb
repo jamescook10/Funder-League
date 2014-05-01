@@ -13,8 +13,11 @@
 
   <%= render 'layouts/header' %>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+      <%= content_tag :div, msg, class: flash_class(name) %>
+    <% end %>
+  <% end %>
 
   <%= yield %>
 
