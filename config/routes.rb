@@ -1,5 +1,7 @@
 FunderLeague::Application.routes.draw do
 
+  get "/faq" => "static_pages#faq"
+  get "/rules" => "static_pages#rules"
   get "/dashboard" => "dashboard#show"
 
   devise_for :players
