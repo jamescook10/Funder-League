@@ -9,6 +9,7 @@ class GamesController < ApplicationController
     if @game.valid?
       @game.save
       redirect_to dashboard_path
+      flash[:success] = "New result added!"
     else
       render "dashboard/show"
     end
