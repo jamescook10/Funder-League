@@ -1,0 +1,46 @@
+ @import "variables";
+
+ .navbar-default {
+ 	background: $grey;
+ }
+
+ .navbar-default .navbar-nav>li>a {
+ 	color: $third-purple;
+ 	font-size: 20px;
+ 	font-weight: 400;
+ } 
+
+ .navbar-brand {
+ 	padding: 5px;
+ }
+
+ .navbar {
+ 	border-radius: 0px;
+ 	margin-bottom: 0px;
+ }
+
+ .dropdown-menu {
+ 	background: $grey;
+ 	border: 1.5px solid $third-purple;
+ 	border-radius: 5px;
+ 	li>a { 
+ 		color: $third-purple;
+ 	}
+ }
+
+ hr {
+ 	margin: 10px 0px;
+ 	border-top: 1px solid #555;
+ }
+
+ input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
+ 	border: none;
+ }
+
+ .alert, .notice {
+	margin: 0px;
+}
+
+.alert, .notice, .hero-wrap {
+	background: $white;
+}
