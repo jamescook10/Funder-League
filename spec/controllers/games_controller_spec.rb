@@ -5,6 +5,8 @@ describe GamesController do
   let(:fifa) { create(:game_type) }
   let(:sam) { create(:player) }
   let(:james) { create(:opponent) }
+  let(:valid_params) { { game: { game_type_id: fifa.id, player_score: 1, opponent_score: 2, opponent_id: james.id } } }
+  let(:invalid_params) { { game: { game_type_id: nil, player_score: 1, opponent_score: 2, opponent_id: james.id } } }
   
   describe "#create" do
 
@@ -15,20 +17,20 @@ describe GamesController do
       end
       
       it "creates a new game" do
-        post :create, { game: { game_type_id: fifa.id, player_score: 1, opponent_score: 2, opponent_id: james.id } }
+        post :create, valid_params
         expect(Game.count).to eq 1
       end
 
       context "and a game is created successfully" do
         it "redirects to the dashboard" do
-          post :create, { game: { game_type_id: fifa.id, player_score: 1, opponent_score: 2, opponent_id: james.id } }
+          post :create, valid_params
           expect(response).to redirect_to dashboard_path
         end
       end
 
       context "and there are errors when trying to create a game" do
         it "renders the dashboard" do
-          post :create, { game: { game_type_id: fifa.id, player_score: 1, opponent_score: 2, opponent_id: james.id } }
+          post :create, invalid_params
           expect(response).to render_template "dashboard/show"
         end
       end      
@@ -37,7 +39,7 @@ describe GamesController do
     context "when a player isn't signed in" do
       
       it "redirects to the login page" do
-        post :create, { game: { game_type_id: fifa.id, player_score: 1, opponent_score: 2, opponent_id: james.id } }
+        post :create, valid_params
         expect(response).to redirect_to new_player_session_path
       end
 

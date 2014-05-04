@@ -3,7 +3,9 @@ class GamesController < ApplicationController
   before_action :authenticate_player!
 
   def create
-    @game = Game.new(game_params, :player_id => current_player.id)
+    game_attributes = game_params
+    game_attributes[:player_id] = current_player.id
+    @game = Game.new(game_attributes)
     if @game.valid?
       @game.save
       redirect_to dashboard_path
