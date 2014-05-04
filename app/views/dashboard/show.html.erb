@@ -1,14 +1,13 @@
-<h1><%= @player.possessive_form(@player.first_name) %> Dashboard</h1>
+<h1><%= current_player.possessive_form(current_player.first_name) %> Dashboard</h1>
 
 <%= form_for @game, html: { role: "form" } do |f| %>
 
   <% if @game.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@game.errors.count, "error") %>
-        prohibited this post from being saved:</h2>
+    <div id="error_explanation" class="alert alert-danger">
+      <h2>Oops! You've got <%= pluralize(@game.errors.count, "error") %> there player...</h2>
 
         <ul>
-          <%= @game.errors.full_messages.each do |msg| %>
+          <% @game.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
           <% end %>
         </ul>
@@ -16,7 +15,25 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :opponent, "Auction title" %>
-    <%= f.text_field :title, placeholder: "Enter an auction title", class: 'form-control' %>
+    <%= f.label :opponent, "Select Game" %>
+    <%= f.collection_select :game_type_id, GameType.all, :id, :name, { prompt: "Select Game" }, { class: "form-control" } %>
   </div>
 
+  <div class="form-group">
+    <%= f.label :opponent_id, "Select Your Opponent" %>
+    <%= f.collection_select :opponent_id, Player.all, :id, :full_name, { prompt: "Select opponent" }, { class: "form-control" } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :player_score, "Your Score" %>
+    <%= f.text_field :player_score, { placeholder: "Please enter your score", class: "form-control" } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :opponent_score, "Opponent's Score" %>
+    <%= f.text_field :opponent_score, { placeholder: "Please enter your opponent's score", class: "form-control" } %>
+  </div>
+
+  <%= f.submit "Add Result" %>
+
+<% end %>

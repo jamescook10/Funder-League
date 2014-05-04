@@ -4,6 +4,5 @@ class DashboardController < ApplicationController
 
   def show
     @game = Game.new
-    @player = current_player
   end
 end
