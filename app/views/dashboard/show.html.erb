@@ -1,39 +1,90 @@
-<h1><%= current_player.possessive_form(current_player.first_name) %> Dashboard</h1>
+<div class="container-fluid">
 
-<%= form_for @game, html: { role: "form" } do |f| %>
+  <div class="col-sm-1 side-menu" style="margin-left:0px;"> 
+    <h2>Menu</h2>
+    <div class="glyphicon glyphicon-dashboard"></div>
+    <div class="glyphicon glyphicon-user"></div>
+    <div class="glyphicon glyphicon-search"></div>
+    <div class="glyphicon glyphicon-cog"></div>
+  </div>
 
-  <% if @game.errors.any? %>
-    <div id="error_explanation" class="alert alert-danger">
-      <h2>Oops! You've got <%= pluralize(@game.errors.count, "error") %> there player...</h2>
+  <div class="col-sm-11">
+    <h1><%= current_player.possessive_form(current_player.first_name) %> Dashboard</h1>
+    <div class="new-result">
+
+
+      <%= form_for @game, html: { role: "form" } do |f| %>
+
+      <% if @game.errors.any? %>
+      <div id="error_explanation" class="alert alert-danger">
+        <h2>Oops! You've got <%= pluralize(@game.errors.count, "error") %> there player...</h2>
 
         <ul>
           <% @game.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
           <% end %>
         </ul>
+      </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :opponent, "Select Game" %>
+        <%= f.collection_select :game_type_id, GameType.all, :id, :name, { prompt: "Select Game" }, { class: "form-control" } %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :opponent_id, "Select Your Opponent" %>
+        <%= f.collection_select :opponent_id, Player.all, :id, :full_name, { prompt: "Select opponent" }, { class: "form-control" } %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :player_score, "Your Score" %>
+        <%= f.text_field :player_score, { placeholder: "Please enter your score", class: "form-control" } %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :opponent_score, "Opponent's Score" %>
+        <%= f.text_field :opponent_score, { placeholder: "Please enter your opponent's score", class: "form-control" } %>
+      </div>
+
+      <%= f.submit "Add Result" %>
+
+      <% end %>
+    </div> 
+
+    <h1>Stats Central</h1>
+    
+    <div class="row" style="text-align:center;">
+      <div class="col-sm-4">
+        <div class="game-stat one">
+          <h3>Game one</h3>
+          <div class="glyphicon glyphicon-adjust"></div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="game-stat two">
+          <h3>Game one</h3>
+          <div class="glyphicon glyphicon-adjust"></div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="game-stat three">
+          <h3>Game one</h3>
+          <div class="glyphicon glyphicon-adjust"></div>
+        </div>
+      </div>
     </div>
-  <% end %>
 
-  <div class="form-group">
-    <%= f.label :opponent, "Select Game" %>
-    <%= f.collection_select :game_type_id, GameType.all, :id, :name, { prompt: "Select Game" }, { class: "form-control" } %>
+
   </div>
 
-  <div class="form-group">
-    <%= f.label :opponent_id, "Select Your Opponent" %>
-    <%= f.collection_select :opponent_id, Player.all, :id, :full_name, { prompt: "Select opponent" }, { class: "form-control" } %>
-  </div>
+  
 
-  <div class="form-group">
-    <%= f.label :player_score, "Your Score" %>
-    <%= f.text_field :player_score, { placeholder: "Please enter your score", class: "form-control" } %>
-  </div>
+</div>
 
-  <div class="form-group">
-    <%= f.label :opponent_score, "Opponent's Score" %>
-    <%= f.text_field :opponent_score, { placeholder: "Please enter your opponent's score", class: "form-control" } %>
-  </div>
 
-  <%= f.submit "Add Result" %>
 
-<% end %>
+
+
