@@ -5,8 +5,8 @@
  }
 
  .navbar-default .navbar-nav>li>a {
- 	color: $third-purple;
- 	font-size: 20px;
+ 	color: $purple;
+ 	font-size: 16px;
  	font-weight: 400;
  } 
 
@@ -19,12 +19,16 @@
  	margin-bottom: 0px;
  }
 
+ h3 {
+ margin-top:10px;
+ }
+
  .dropdown-menu {
  	background: $grey;
- 	border: 1.5px solid $third-purple;
+ 	border: 1.5px solid $purple;
  	border-radius: 5px;
  	li>a { 
- 		color: $third-purple;
+ 		color: $purple;
  	}
  }
 
@@ -37,10 +41,28 @@
  	border: none;
  }
 
+ .new_player div {
+ 	&>input {
+ 	border-radius: 5px;
+ 	margin: 5px 0px;
+ 	}
+}
+
  .alert, .notice {
 	margin: 0px;
 }
 
 .alert, .notice, .hero-wrap {
 	background: $white;
+}
+
+.form-group {
+	width: 48%;
+	float: left;
+	margin-right: 5px; 
+}
+
+.container-fluid  {
+	padding-left: 0px;
+	padding-right: 0px;
 }
