@@ -12,15 +12,8 @@
  *= require_tree .
  */
 
-$primary-purple: #8E44AD;
-$secondary-purple: #9B59B6;
-$third-purple: #A77BB6;
-$white: rgb(250,250,250);
-$grey: rgb(242,242,242);
-$dark-grey: #95A5A6;
-
-$primary-font: 'Source Sans Pro', 'sans-serif';
-$secondary-font: 'Ubuntu', 'sans-serif';
+@import "variables";
+@import "bootstrap-changes";
 
 body {
 	font-family: $secondary-font
@@ -30,18 +23,8 @@ h1, h2, h3, h4 {
 	font-family: $primary-font
 }
 
-.navbar-default {
-	background: $grey;
-}
-
 .footer-wrap{
 	background: $grey;
-}
-
-.navbar-default .navbar-nav>li>a {
-	color: $third-purple;
-	font-size: 20px;
-	font-weight: 400;
 }
 
 #logo {
@@ -72,32 +55,35 @@ h1, h2, h3, h4 {
 	margin-bottom: 5px;
 }
 
-.navbar-brand {
-	padding: 5px;
-}
-
-.navbar {
-	border-radius: 0px;
-	margin-bottom: 0px;
-}
-
-#sign-up, #sign-in {
+#sign-up, #sign-in, #sign-out, #dashboard {
 	border-radius: 2px;
-	box-shadow: 0 2px 0 0 rgba(142,68,173, 0.3);
-	margin: 13px 10px 13px;
 	padding: 5px 15px 5px;
 	color: $white;
 }
 
+nav #sign-up, nav #sign-in, nav #sign-out, nav #dashboard {
+	margin: 13px 10px 13px;
+}
+
 #sign-up {
-	background: $third-purple;
+	background: $green;
+	box-shadow: 0 2px 0 0 rgba(161,196,148, 0.3);
 }
 
 #sign-in {
-	background: $third-purple;
+	background: $purple;
+	box-shadow: 0 2px 0 0 rgba(142,68,173, 0.3);
 }
 
-hr {
-	margin: 10px 0px;
-	border-top: 1px solid #555;
+#dashboard {
+	background: $blue;
+	box-shadow: 0 2px 0 0 rgba(147,160,196, 0.3);
 }
+
+#sign-out {
+	background: $red;
+	box-shadow: 0 2px 0 0 rgba(196,147,160, 0.3);
+}
+
+
+

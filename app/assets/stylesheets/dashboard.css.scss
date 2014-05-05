@@ -1,3 +1,53 @@
 // Place all the styles related to the dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "variables";
+
+form {
+ 	&>input {
+ 	border-radius: 5px;
+ 	margin: 5px 0px;
+ 	}
+}
+
+.side-menu {
+	background: $dark-purple;
+	color: $white;
+	text-align: center;
+	div {
+		font-size: 4.75em;
+		margin: 10px 0px;
+	}
+}
+
+.new-result {
+	background: $green;
+	border-radius: 5px;
+	box-shadow: 0 4px 0 0 rgba(161,196,148, 0.4);
+	padding: 10px;
+	margin: 10px;
+}
+
+.game-stat {
+	border-radius: 5px;
+	padding: 2px 10px 10px 10px;
+	margin: 10px;
+	color: $white;
+	&.one {
+		background: $red;
+		box-shadow: 0 4px 0 0 rgba(196,147,160, 0.6);	
+	}
+	&.two {
+		background: $blue;
+		box-shadow: 0 4px 0 0 rgba(147,160,196, 0.6);
+	}
+	&.three {
+		background: $purple;
+		box-shadow: 0 4px 0 0 rgba(142,68,173, 0.4);
+	}
+	div {
+		font-size: 600%;
+	}
+}
+
