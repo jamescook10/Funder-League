@@ -22,6 +22,7 @@ describe GamesController do
       end
 
       context "and a game is created successfully" do
+
         it "redirects to the dashboard" do
           post :create, valid_params
           expect(response).to redirect_to dashboard_path

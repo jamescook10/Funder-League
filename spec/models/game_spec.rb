@@ -60,4 +60,44 @@ describe Game do
 
   end
 
+  describe "#winner" do
+    
+    let(:sam) { create(:player) }
+    let(:james) { create(:opponent) }
+    subject { create(:game, player_score: 2, opponent_score: 0, player_id: sam.id, opponent_id: james.id) }
+
+    it "returns the winning player" do
+      expect(subject.winner).to eq sam
+    end
+  end
+
+  describe "#create_scores" do
+
+    subject { create(:game) }
+
+    it "creates new scores" do
+      expect(subject).to have(2).scores
+    end
+
+  end
+
+  describe "#player_score" do
+
+    subject { create(:game, player_score: 3) }
+
+    it "retrieves the current player's score" do
+      expect(subject.player_score).to eq 3
+    end
+  end
+
+  describe "#opponent_score" do
+    
+    subject { create(:game, opponent_score: 10) }
+
+    it "retrieves the opponent's score" do
+      expect(subject.opponent_score).to eq 10
+    end
+
+  end
+
 end
