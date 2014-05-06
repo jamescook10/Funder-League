@@ -1,10 +1,15 @@
 FunderLeague::Application.routes.draw do
 
-  get "/faq" => "static_pages#faq"
-  get "/rules" => "static_pages#rules"
-  get "/dashboard" => "dashboard#show"
+  controller "static_pages" do
+    get "/faq", action: "faq"
+    get "/rules", action: "rules"
+  end
+ 
+  get "/dashboard", to: "dashboard#index"
+  get "/dashboard/my-games", to: "dashboard#my_games"
 
-  devise_for :players
+  devise_for :players, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
+
   resources :games
 
   root to: "static_pages#home"
