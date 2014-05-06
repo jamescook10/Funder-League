@@ -6,7 +6,7 @@ FunderLeague::Application.routes.draw do
   end
  
   get "/dashboard", to: "dashboard#index"
-  get "/dashboard/my-games", to: "dashboard#my_games"
+  get "/dashboard/my-games", to: "dashboard#my_games", as: "my_games"
 
   devise_for :players, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
 

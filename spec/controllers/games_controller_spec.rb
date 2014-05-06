@@ -32,7 +32,7 @@ describe GamesController do
       context "and there are errors when trying to create a game" do
         it "renders the dashboard" do
           post :create, invalid_params
-          expect(response).to render_template "dashboard/show"
+          expect(response).to render_template "dashboard/index"
         end
       end      
     end

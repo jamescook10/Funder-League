@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'Players' do
   
   scenario "register new account" do
-    visit '/players/sign_up'
+    visit '/register'
     fill_in :player_email, with: "james.cook@fundingcircle.com"
     fill_in :player_password, with: "password"
     fill_in :player_password_confirmation, with: "password"

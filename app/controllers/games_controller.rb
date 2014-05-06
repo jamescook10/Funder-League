@@ -11,7 +11,7 @@ class GamesController < ApplicationController
       redirect_to dashboard_path
       flash[:success] = "New result added!"
     else
-      render "dashboard/show"
+      render "dashboard/index"
     end
   end
 
