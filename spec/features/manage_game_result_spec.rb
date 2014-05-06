@@ -1,4 +1,7 @@
 require 'spec_helper'
+include SessionSteps
+include CommonSteps
+include GameSteps
 
 feature 'Games' do
 
@@ -9,42 +12,17 @@ feature 'Games' do
   end
 
   scenario 'add a new result from the user dashboard' do
-
-    visit '/dashboard'
-    fill_in :player_email, with: "sam.johnson@fundingcircle.com"
-    fill_in :player_password, with: "password"
-    click_button "Sign in"
-
-    select "FIFA 14", from: :game_game_type_id
-    select "James Cook", from: :game_opponent_id 
-    fill_in :game_player_score, with: 2
-    fill_in :game_opponent_score, with: 3
-
-    click_button "Add Result"
-
+    login_player
+    ensure_on dashboard_path
+    create_game({ game_type: "FIFA 14", opponent: "James Cook", player_score: 1, opponent_score: 2 })
     expect(page).to have_content "New result added!"
   end
 
   scenario "view games result history on 'My Games' page" do
-    
-    visit '/dashboard'
-    fill_in :player_email, with: "sam.johnson@fundingcircle.com"
-    fill_in :player_password, with: "password"
-    click_button "Sign in"
-
-    select "FIFA 14", from: :game_game_type_id
-    select "James Cook", from: :game_opponent_id 
-    fill_in :game_player_score, with: 2
-    fill_in :game_opponent_score, with: 3
-
-    click_button "Add Result"
-
-    select "FIFA 14", from: :game_game_type_id
-    select "James Cook", from: :game_opponent_id 
-    fill_in :game_player_score, with: 2
-    fill_in :game_opponent_score, with: 1
-
-    click_button "Add Result"
+    login_player
+    ensure_on dashboard_path
+    create_game({ game_type: "FIFA 14", opponent: "James Cook", player_score: 1, opponent_score: 2 })
+    create_game({ game_type: "FIFA 14", opponent: "James Cook", player_score: 3, opponent_score: 1 })
 
     click_link('#my-games')
 
@@ -56,19 +34,22 @@ feature 'Games' do
 
   scenario "edit game result from the 'My Games' page" do
     
-    visit '/dashboard'
-    fill_in :player_email, with: "sam.johnson@fundingcircle.com"
-    fill_in :player_password, with: "password"
-    click_button "Sign in"
+    login_player
+    ensure_on dashboard_path
+    create_game({ game_type: "FIFA 14", opponent: "James Cook", player_score: 3, opponent_score: 2 })
 
-    select "FIFA 14", from: :game_game_type_id
-    select "James Cook", from: :game_opponent_id 
-    fill_in :game_player_score, with: 2
-    fill_in :game_opponent_score, with: 3
+    ensure_on my_games_path
+    expect(page).to have_content "My Games"
 
-    click_button "Add Result"
+    click_link("Edit Result")
 
-    click_link('#my-games')
+    fill_in :game_player_score, with: 3
+    fill_in :game_opponent_score, with: 0
+
+    click_button "Save Game"
+
+    expect(page).to have_content "Game successfully updated"
+    expect(page).to have_content "Sam Johnson 3 - 0 James Cook"
   end
 
 end

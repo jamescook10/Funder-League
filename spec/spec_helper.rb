@@ -9,6 +9,9 @@ require 'capybara-screenshot/rspec'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
+# Requires supporting Capybara files with custom helper methods for use in Capybara tests. 
+Dir[Rails.root.join("spec/features/steps/**/*.rb")].each {|f| require f}
+
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
