@@ -4,7 +4,7 @@ describe Game do
 
   describe "validations" do
 
-    subject { create(:game) }
+    subject { build(:game) }
 
     describe "game_type_id" do
       it 'must be present' do
@@ -58,6 +58,14 @@ describe Game do
       expect(game.calculate_winner).to eq sam.id
     end
 
+    context "when the game was tied" do
+
+      subject { create(:game, player_score: 1, opponent_score: 1) }
+      it "returns a player_id of 0" do
+        expect(subject.calculate_winner).to eq 0
+      end
+    end
+
   end
 
   describe "#winner" do
@@ -69,7 +77,16 @@ describe Game do
     it "returns the winning player" do
       expect(subject.winner).to eq sam
     end
+
+    context "when the game was tied" do
+      subject { create(:game, player_score: 1, opponent_score: 1) }
+      it "returns a message saying the game was a tie" do
+        expect(subject.winner).to eq "This game was a draw."
+      end
+    end
   end
+
+  describe ""
 
   describe "#create_scores" do
 
@@ -81,23 +98,52 @@ describe Game do
 
   end
 
-  describe "#player_score" do
+  describe "reading scores" do
 
-    subject { create(:game, player_score: 3) }
+    let(:sam) { create(:player) }
+    let(:james) { create(:opponent) } 
 
-    it "retrieves the current player's score" do
-      expect(subject.player_score).to eq 3
+    context "when a new game" do
+
+      subject { build(:game, player_id: sam.id, player_score: "2", opponent_id: james.id, opponent_score: "10") }
+
+      describe "#player_score" do
+        it "displays the current player's score" do
+          expect(subject.player_score).to eq "2"
+        end 
+      end
+
+      describe "#opponent_score" do
+        it "displays the opponent's score" do
+          expect(subject.opponent_score).to eq "10"
+        end
+      end
+    end
+
+    context "from an existing game" do
+
+      let(:game) { create(:game, player_id: sam.id, player_score: 2, opponent_id: james.id, opponent_score: 10) }
+      subject { Game.find(game.id) }
+
+      # Setting the current player which will be set in the controller.
+      before(:each) do
+        subject.player_id = sam.id 
+      end
+
+      describe "#player_score" do
+        it "retrieves the current player's score" do
+          expect(subject.player_score).to eq "2"
+        end
+      end
+
+      describe "#opponent_score" do
+        it "retrieves the opponent's score" do
+          expect(subject.opponent_score).to eq "10"
+        end
+      end
     end
   end
 
-  describe "#opponent_score" do
-    
-    subject { create(:game, opponent_score: 10) }
-
-    it "retrieves the opponent's score" do
-      expect(subject.opponent_score).to eq 10
-    end
-
-  end
+  
 
 end

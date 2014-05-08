@@ -6,6 +6,9 @@ class Player < ActiveRecord::Base
 
   validates :first_name, presence: true
 
+  has_many :scores
+  has_many :games, through: :scores
+
   def full_name
     if self.first_name && self.last_name
       self.first_name + " " + self.last_name

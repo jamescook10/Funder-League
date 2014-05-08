@@ -4,6 +4,7 @@ class Game < ActiveRecord::Base
 
   belongs_to :game_type
   has_many :scores
+  has_many :players, through: :scores
   before_save :calculate_winner
   before_create :create_scores
 
@@ -14,15 +15,19 @@ class Game < ActiveRecord::Base
   validates :opponent_score, presence: true
 
   def player_score
-    @player_score || self.scores.where("player_id = #{@player_id}").value
-  rescue NoMethodError
-    errors.add :player_score, "does not exist for this player."
+    if self.new_record?
+      @player_score
+    else
+      self.scores.where("player_id = #{@player_id}")[0].value
+    end
   end
 
   def opponent_score
-    @opponent_score || self.scores.where.not("player_id = #{@player_id}").value
-  rescue NoMethodError
-    errors.add :opponent_score, "does not exist for this opponent."
+    if self.new_record?
+      @opponent_score
+    else
+      self.scores.where.not("player_id = #{@player_id}")[0].value
+    end
   end
 
   def calculate_winner
@@ -36,7 +41,11 @@ class Game < ActiveRecord::Base
   end
 
   def winner
+    if winner_id <=  0
+      "This game was a draw."
+    else
     Player.find(winner_id)
+    end
   end
 
   def create_scores
