@@ -61,14 +61,14 @@ describe Game do
     context "when the game was tied" do
 
       subject { create(:game, player_score: 1, opponent_score: 1) }
-      it "returns a player_id of 0" do
-        expect(subject.calculate_winner).to eq 0
+      it "returns nil" do
+        expect(subject.calculate_winner).to eq nil
       end
     end
 
   end
 
-  describe "#winner" do
+  describe ".winner" do
     
     let(:sam) { create(:player) }
     let(:james) { create(:opponent) }
@@ -80,8 +80,8 @@ describe Game do
 
     context "when the game was tied" do
       subject { create(:game, player_score: 1, opponent_score: 1) }
-      it "returns a message saying the game was a tie" do
-        expect(subject.winner).to eq "This game was a draw."
+      it "returns nil" do
+        expect(subject.winner).to eq nil
       end
     end
   end
