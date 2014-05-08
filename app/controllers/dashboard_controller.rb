@@ -7,6 +7,6 @@ class DashboardController < ApplicationController
   end
 
   def my_games
-    
+    @games = current_player.games
   end
 end
