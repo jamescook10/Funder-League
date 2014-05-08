@@ -11,9 +11,15 @@
   <h1>My Games</h1>
 
   <% @game_groups.each_pair do |game_type, games| %>
-    <%= game_type.name %>
+    <h2><%= game_type.name %></h2>
     <% games.each do |game| %>
-      <%= game.inspect %>
+      <div class="result <%= game_type.name.downcase.split.join('-') %>">
+      <% game.scores_for(current_player).each do |score| %>
+        <div class="score">
+          <%= Player.find(score.player_id).full_name %>: <%= score.value %>
+        </div>
+      <% end %>
+      </div>
     <% end %>
   <% end %>
 

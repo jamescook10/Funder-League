@@ -59,13 +59,11 @@ describe Game do
     end
 
     context "when the game was tied" do
-
       subject { create(:game, player_score: 1, opponent_score: 1) }
       it "returns nil" do
         expect(subject.calculate_winner).to eq nil
       end
     end
-
   end
 
   describe ".winner" do
@@ -85,8 +83,6 @@ describe Game do
       end
     end
   end
-
-  describe ""
 
   describe "#create_scores" do
 

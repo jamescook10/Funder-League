@@ -4,6 +4,7 @@ class GamesController < ApplicationController
 
   def index
     @game_groups = current_player.games.includes(:game_type).group_by(&:game_type)
+    @player_id = current_player.id
   end
 
   def create
