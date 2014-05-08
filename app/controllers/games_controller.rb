@@ -2,6 +2,11 @@ class GamesController < ApplicationController
 
   before_action :authenticate_player!
 
+  def index
+    @game_groups = current_player.games.includes(:game_type).group_by(&:game_type)
+    @player_id = current_player.id
+  end
+
   def create
     game_attributes = game_params
     game_attributes[:player_id] = current_player.id

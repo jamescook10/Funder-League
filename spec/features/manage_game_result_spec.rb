@@ -24,7 +24,7 @@ feature 'Games' do
     create_game({ game_type: "FIFA 14", opponent: "James Cook", player_score: 1, opponent_score: 2 })
     create_game({ game_type: "FIFA 14", opponent: "James Cook", player_score: 3, opponent_score: 1 })
 
-    click_link('#my-games')
+    click_link('my-games')
 
     expect(page).to have_content "My Games"
     expect(page).to have_content "FIFA 14"
