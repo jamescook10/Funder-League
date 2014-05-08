@@ -10,6 +10,13 @@
 
   <h1>My Games</h1>
 
+  <% @game_groups.each_pair do |game_type, games| %>
+    <%= game_type.name %>
+    <% games.each do |game| %>
+      <%= game.inspect %>
+    <% end %>
+  <% end %>
+
 </div>
 
 <div class="col-sm-11">

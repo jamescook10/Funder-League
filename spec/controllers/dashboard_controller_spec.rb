@@ -14,13 +14,4 @@ describe DashboardController do
       expect(response).to render_template :index
     end
   end
-
-  describe "GET '#my_games'" do
-    it "it renders the 'My Games' page" do
-      sign_in create(:player)
-      get :my_games
-      expect(response).to render_template :my_games
-    end
-  end
-
 end
