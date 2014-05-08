@@ -13,7 +13,6 @@
       <a class="navbar-brand" href="/"><%= image_tag("funderleague_logo.png", :alt => "logo", :id => "logo") %></a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav">
@@ -37,10 +36,8 @@
           <li><%= link_to "Log in", new_player_session_path, method: :get, id: "sign-in" %></li>
           <li><%= link_to "Register", new_player_registration_path, method: :get, id: "sign-up" %></li>
         <% end %>
-        <!-- <li><a href="#" id="sign-in">Sign In</a></li>
-        <li><a href="#" id="sign-up">Sign Up</a></li> -->
       </ul>
       
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>

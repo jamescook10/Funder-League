@@ -19,6 +19,10 @@ form {
 		font-size: 4.75em;
 		margin: 10px 0px;
 	}
+	a {
+		font-size: 4.75em;
+		margin: 10px 0px;
+	}
 }
 
 .new-result {
@@ -50,4 +54,88 @@ form {
 		font-size: 600%;
 	}
 }
+
+.cont {
+	width: 660px;
+	margin: auto;
+	h2 {
+		margin-top: 10px;
+		border-radius: 10px;
+		color: $white;
+	}
+}
+
+
+.result {
+	border-radius: 5px;
+	padding: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 30px; 
+	height: 210px;
+	&.fifa {
+		background: $green;
+		box-shadow: 0 5px 0 0 rgba(161,196,148, 0.4);
+		.cont h2 {
+			background: $dark-green;
+		}
+	}
+	&.pool {
+		background: $blue;
+		box-shadow: 0 5px 0 0 rgba(147,160,196, 0.4);
+		.cont h2 {
+			background: $dark-blue;
+			
+		}
+	}
+	&.table-tennis {
+		background: $red;
+		box-shadow: 0 5px 0 0 rgba(196,147,160, 0.4);
+		.cont h2 {
+			background: $dark-red;
+			
+		}
+	}
+}
+
+.result-box {
+	background: $white;
+	height:100px; 
+	width:40%;
+	border-radius: 5px;
+	box-shadow: 4px 4px 0px 1px rgba(220, 220, 220, 0.6);
+	display: inline-block;
+	float: left;
+	h3 {
+		font-size: 8em;
+		line-height:0.8;
+		margin-top: 0px;
+	}
+	h4 {
+		margin-top: 20px;
+		color: $white;
+		border-bottom: 2px solid $white;
+		font-size: 20px;
+	}
+}
+
+.vs {
+	width: 20%;
+	h3 {
+		margin-top: 35px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 

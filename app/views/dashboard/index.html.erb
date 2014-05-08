@@ -1,15 +1,6 @@
 <div class="container-fluid">
 
-  <div class="col-sm-1 side-menu" style="margin-left:0px;"> 
-    <a href="/"><%= image_tag("funderleague_logo.png", :alt => "logo", :id => "logo") %></a>
-    <h2>Menu</h2>
-    <div class="glyphicon glyphicon-dashboard"></div>
-    <div class="glyphicon glyphicon-user">
-    </div>
-    <%= link_to "My Games", my_games_path, id: "my-games"%>
-    <div class="glyphicon glyphicon-search"></div>
-    <div class="glyphicon glyphicon-cog"></div>
-  </div>
+  <%= render 'dashboard/side_menu' %>
 
   <div class="col-sm-11">
     <h1><%= current_player.possessive_form(current_player.first_name) %> Dashboard</h1>
