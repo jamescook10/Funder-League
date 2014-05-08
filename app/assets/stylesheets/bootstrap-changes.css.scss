@@ -1,0 +1,74 @@
+ @import "variables";
+
+
+ body{
+  background-color: $bg-grey;
+  }
+
+ .navbar-default {
+ 	background: $bg-black;
+  border-color: $bg-black;
+ }
+
+ .navbar-default .navbar-nav>li>a {
+ 	color: $purple;
+ 	font-size: 16px;
+ 	font-weight: 400;
+ } 
+
+ .navbar-brand {
+ 	padding: 5px;
+ }
+
+ .navbar {
+ 	border-radius: 0px;
+ 	margin-bottom: 0px;
+ }
+
+ h3 {
+ margin-top:10px;
+ }
+
+ .dropdown-menu {
+ 	background: $grey;
+ 	border: 1.5px solid $purple;
+ 	border-radius: 5px;
+ 	li>a { 
+ 		color: $purple;
+ 	}
+ }
+
+ hr {
+ 	margin: 10px 0px;
+ 	border-top: 1px solid #555;
+ }
+
+ input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
+ 	border: none;
+ }
+
+ .new_player div {
+ 	&>input {
+ 	border-radius: 5px;
+ 	margin: 5px 0px;
+ 	}
+}
+
+ .alert, .notice {
+	margin: 0px;
+}
+
+/*.alert, .notice, .hero-wrap {
+	background: 
+}*/
+
+.form-group {
+	width: 48%;
+	float: left;
+	margin-right: 5px; 
+}
+
+.container-fluid  {
+	padding-left: 0px;
+	padding-right: 0px;
+}
