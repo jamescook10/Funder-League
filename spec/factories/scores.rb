@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :score do
-    player nil
-    game nil
-    value "MyString"
+    player_id 1
+    game_id 1
+    value "5"
   end
 end
