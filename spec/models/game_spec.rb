@@ -97,7 +97,16 @@ describe Game do
   describe "reading scores" do
 
     let(:sam) { create(:player) }
-    let(:james) { create(:opponent) } 
+    let(:james) { create(:opponent) }
+
+    describe "#scores_for" do
+      let(:game) { create(:game, player_id: sam.id) }
+      subject { game }
+
+      it "returns the scores for a game sorted by current player" do
+        expect(subject.scores_for(sam).first.player).to eq sam 
+      end
+    end
 
     context "when a new game" do
 
