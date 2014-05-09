@@ -28,8 +28,8 @@ feature 'Games' do
 
     expect(page).to have_content "My Games"
     expect(page).to have_content "FIFA 14"
-    expect(page).to have_content "Sam Johnson 2 - 3 James Cook"
-    expect(page).to have_content "Sam Johnson 2 - 1 James Cook"
+    expect(page).to have_content "1 Sam Johnson VS 2 James Cook"
+    expect(page).to have_content "3 Sam Johnson VS 1 James Cook"
   end
 
   scenario "edit game result from the 'My Games' page" do
