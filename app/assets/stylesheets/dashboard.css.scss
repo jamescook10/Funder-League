@@ -19,7 +19,7 @@ form {
 		font-size: 4.75em;
 		margin: 10px 0px;
 	}
-	a {
+	.games-links {
 		font-size: 4.75em;
 		margin: 10px 0px;
 	}
@@ -75,14 +75,14 @@ form {
 	height: 210px;
 	&.fifa {
 		background: $green;
-		box-shadow: 0 5px 0 0 rgba(161,196,148, 0.4);
+		box-shadow: 0 5px 0 0 rgba(161,196,148, 0.7);
 		.cont h2 {
 			background: $dark-green;
 		}
 	}
 	&.pool {
 		background: $blue;
-		box-shadow: 0 5px 0 0 rgba(147,160,196, 0.4);
+		box-shadow: 0 5px 0 0 rgba(147,160,196, 0.7);
 		.cont h2 {
 			background: $dark-blue;
 			
@@ -90,7 +90,7 @@ form {
 	}
 	&.table-tennis {
 		background: $red;
-		box-shadow: 0 5px 0 0 rgba(196,147,160, 0.4);
+		box-shadow: 0 5px 0 0 rgba(196,147,160, 0.7);
 		.cont h2 {
 			background: $dark-red;
 			

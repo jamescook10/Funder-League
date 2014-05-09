@@ -1,12 +1,12 @@
 <div class="col-sm-1 side-menu"> 
   
-  <a href="/"><%= image_tag("funderleague_logo.png", :alt => "logo", :id => "logo") %></a>
+  <a href="/"><%= image_tag("funderleague_logo.png", :alt => "logo", :id => "logo-sm") %></a>
   
   <h2>Menu</h2>
-  
-  <div class="glyphicon glyphicon-dashboard"></div>
-  <%= link_to "" , my_games_path, class: "glyphicon glyphicon-user", id: "my-games"%>
+  <%= link_to "" , dashboard_path, class: "glyphicon glyphicon-dashboard games-links"%>
+  <%= link_to "" , my_games_path, class: "glyphicon glyphicon-user games-links", id: "my-games"%>
   <div class="glyphicon glyphicon-search"></div>
+  <li><a href="/leagues">Leagues</a></li>
   <div class="glyphicon glyphicon-cog"></div>
 
 </div>
