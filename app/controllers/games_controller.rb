@@ -2,6 +2,8 @@ class GamesController < ApplicationController
 
   before_action :authenticate_player!
 
+  layout "dashboard"
+
   def index
     @game_groups = current_player.games.includes(:game_type).group_by(&:game_type)
     @player_id = current_player.id
@@ -13,7 +15,7 @@ class GamesController < ApplicationController
     @game = Game.new(game_attributes)
     if @game.valid?
       @game.save
-      redirect_to dashboard_path
+      redirect_to my_games_path
       flash[:success] = "New result added!"
     else
       render "dashboard/index"
