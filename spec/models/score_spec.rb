@@ -6,6 +6,7 @@ describe Score do
     subject { create(:score) }
 
     describe "player_id" do
+
       it "must be present" do
         subject.player_id = nil
         expect(subject).to_not be_valid
