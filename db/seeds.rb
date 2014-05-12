@@ -11,6 +11,9 @@ GameType.create(name: "Table Tennis")
 GameType.create(name: "Pool")
 GameType.create(name: "Table Football")
 
-Player.create(FactoryGirl.attributes_for(:player))
-Player.create(FactoryGirl.attributes_for(:opponent))
+
+10.times do
+  Player.create(FactoryGirl.attributes_for(:player))
+end
+
 

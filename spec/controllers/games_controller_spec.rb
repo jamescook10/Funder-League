@@ -3,14 +3,14 @@ require 'spec_helper'
 describe GamesController do
 
   let(:fifa) { create(:game_type) }
-  let(:sam) { create(:player) }
-  let(:james) { create(:opponent) }
-  let(:valid_params) { { game: { game_type_id: fifa.id, player_score: 1, opponent_score: 2, opponent_id: james.id } } }
-  let(:invalid_params) { { game: { game_type_id: nil, player_score: 1, opponent_score: 2, opponent_id: james.id } } }
+  let(:player) { create(:player) }
+  let(:opponent) { create(:player) }
+  let(:valid_params) { { game: { game_type_id: fifa.id, player_score: 1, opponent_score: 2, opponent_id: opponent.id } } }
+  let(:invalid_params) { { game: { game_type_id: nil, player_score: 1, opponent_score: 2, opponent_id: opponent.id } } }
   
   describe "GET '#index'" do
     it "renders the 'My Games' page" do
-      sign_in sam
+      sign_in player
       get :index
       expect(response).to render_template :index
     end
@@ -21,7 +21,7 @@ describe GamesController do
     context "when a player is signed in" do
 
       before(:each) do
-        sign_in sam
+        sign_in player
       end
       
       it "creates a new game" do

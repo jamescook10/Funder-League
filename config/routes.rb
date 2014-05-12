@@ -8,11 +8,10 @@ FunderLeague::Application.routes.draw do
   get "/dashboard", to: "dashboard#index"
   get "/dashboard/my-games", to: "games#index", as: :my_games
 
-  get "/leagues", to: "leagues#index"
-
   devise_for :players, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
 
   resources :games
+  resources :leagues, only: [:index, :show], param: :name
 
   root to: "static_pages#home"
   # The priority is based upon order of creation: first created -> highest priority.

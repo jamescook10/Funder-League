@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :game do
-    game_type_id 1
+    game_type
     player_score 1
     player_id 1
     opponent_score 2

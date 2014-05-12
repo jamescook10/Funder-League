@@ -53,7 +53,7 @@ describe Game do
 
     it "returns the winning player's player_id" do
       sam = create(:player)
-      james = create(:opponent)
+      james = create(:player)
       game = create(:game, player_id: sam.id, player_score: 1, opponent_id: james.id, opponent_score: 0)
       expect(game.calculate_winner).to eq sam.id
     end
@@ -69,7 +69,7 @@ describe Game do
   describe ".winner" do
     
     let(:sam) { create(:player) }
-    let(:james) { create(:opponent) }
+    let(:james) { create(:player) }
     subject { create(:game, player_score: 2, opponent_score: 0, player_id: sam.id, opponent_id: james.id) }
 
     it "returns the winning player" do
@@ -97,7 +97,7 @@ describe Game do
   describe "reading scores" do
 
     let(:sam) { create(:player) }
-    let(:james) { create(:opponent) }
+    let(:james) { create(:player) }
 
     describe "#scores_for" do
       let(:game) { create(:game, player_id: sam.id) }
