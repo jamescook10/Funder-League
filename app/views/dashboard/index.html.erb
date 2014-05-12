@@ -1,5 +1,5 @@
-<div class="container-fluid">
-
+<%= render 'layouts/nav' %>
+<div class="container-fluid menu-padding">
 
   <%= render 'dashboard/side_menu' %>
 
@@ -48,30 +48,34 @@
     </div> 
 
     <h1>Stats Central</h1>
+
+    <% GameType.all.each do |gametype| %>
+    <h2><%= gametype.name %></h2>
     
     <div class="row" style="text-align:center;">
-      <div class="col-sm-4">
-        <div class="game-stat one">
-          <h3>Game one</h3>
+      <div class="col-md-4">
+        <div class="game-stat <%= gametype.name.downcase.split.join('-') %>">
+          <h3>Win %</h3>
           <div class="glyphicon glyphicon-adjust"></div>
         </div>
       </div>
 
-      <div class="col-sm-4">
-        <div class="game-stat two">
-          <h3>Game one</h3>
+      <div class="col-md-4">
+        <div class="game-stat <%= gametype.name.downcase.split.join('-') %>">
+          <h3>Position</h3>
           <div class="glyphicon glyphicon-adjust"></div>
         </div>
       </div>
 
-      <div class="col-sm-4">
-        <div class="game-stat three">
-          <h3>Game one</h3>
+      <div class="col-md-4">
+        <div class="game-stat <%= gametype.name.downcase.split.join('-') %>">
+          <h3>Games played</h3>
           <div class="glyphicon glyphicon-adjust"></div>
         </div>
       </div>
     </div>
 
+    <% end %>
 
   </div>
 

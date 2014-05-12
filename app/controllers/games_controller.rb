@@ -2,8 +2,6 @@ class GamesController < ApplicationController
 
   before_action :authenticate_player!
 
-  layout "dashboard"
-
   def index
     @game_groups = current_player.games.includes(:game_type).group_by(&:game_type)
     @player_id = current_player.id
