@@ -5,38 +5,38 @@ include GameSteps
 
 feature 'Games' do
 
+  let!(:player) { create(:player) }
+  let!(:opponent) { create(:player) }
+  let!(:game_type) { create(:game_type) }
+
   before(:each) do
-    create(:player)
-    create(:opponent)
-    create(:game_type)
+    login_player(player)
   end
 
   scenario 'add a new result from the user dashboard' do
-    login_player
     ensure_on dashboard_path
-    create_game({ game_type: "FIFA 14", opponent: "James Cook", player_score: 1, opponent_score: 2 })
+    create_game({ game_type: game_type.name, opponent: opponent.full_name, player_score: 1, opponent_score: 2 })
     expect(page).to have_content "New result added!"
   end
 
   scenario "view games result history on 'My Games' page" do
-    login_player
     ensure_on dashboard_path
-    create_game({ game_type: "FIFA 14", opponent: "James Cook", player_score: 1, opponent_score: 2 })
-    create_game({ game_type: "FIFA 14", opponent: "James Cook", player_score: 3, opponent_score: 1 })
+    create_game({ game_type: game_type.name, opponent: opponent.full_name, player_score: 1, opponent_score: 2 })
+    ensure_on dashboard_path
+    create_game({ game_type: game_type.name, opponent: opponent.full_name, player_score: 3, opponent_score: 1 })
 
     click_link('my-games')
 
     expect(page).to have_content "My Games"
-    expect(page).to have_content "FIFA 14"
-    expect(page).to have_content "1 Sam Johnson VS 2 James Cook"
-    expect(page).to have_content "3 Sam Johnson VS 1 James Cook"
+    expect(page).to have_content game_type.name
+    expect(page).to have_content "1 #{player.full_name} VS 2 #{opponent.full_name}"
+    expect(page).to have_content "3 #{player.full_name} VS 1 #{opponent.full_name}"
   end
 
   scenario "edit game result from the 'My Games' page" do
     
-    login_player
     ensure_on dashboard_path
-    create_game({ game_type: "FIFA 14", opponent: "James Cook", player_score: 3, opponent_score: 2 })
+    create_game({ game_type: game_type.name, opponent: opponent.full_name, player_score: 3, opponent_score: 2 })
 
     ensure_on my_games_path
     expect(page).to have_content "My Games"
@@ -49,7 +49,7 @@ feature 'Games' do
     click_button "Save Game"
 
     expect(page).to have_content "Game successfully updated"
-    expect(page).to have_content "Sam Johnson 3 - 0 James Cook"
+    expect(page).to have_content "#{player.full_name} 3 - 0 #{opponent.full_name}"
   end
 
 end
