@@ -5,24 +5,16 @@
 @import "variables";
 
 form {
- 	&>input {
- 	border-radius: 5px;
- 	margin: 5px 0px;
- 	}
+	&>input {
+		border-radius: 5px;
+		margin: 5px 0px;
+	}
 }
 
 .side-menu {
 	background: $dark-purple;
 	color: $white;
 	text-align: center;
-	div {
-		font-size: 4.75em;
-		margin: 10px 0px;
-	}
-	.games-links {
-		font-size: 4.75em;
-		margin: 10px 0px;
-	}
 }
 
 .new-result {
@@ -93,7 +85,6 @@ form {
 		box-shadow: 0 5px 0 0 rgba(196,147,160, 0.7);
 		.cont h2 {
 			background: $dark-red;
-			
 		}
 	}
 }
@@ -107,9 +98,10 @@ form {
 	display: inline-block;
 	float: left;
 	h3 {
-		font-size: 8em;
+		font-size: 120px;
 		line-height:0.8;
 		margin-top: 0px;
+		color: $bg-black;
 	}
 	h4 {
 		margin-top: 20px;
@@ -123,6 +115,44 @@ form {
 	width: 20%;
 	h3 {
 		margin-top: 35px;
+	}
+}
+
+.col-sm-1.side-menu {
+	padding-left: 0px;
+	padding-right: 0px;
+	height: 600px;
+	h3 a {
+		font-size:24px;
+		}
+	a {
+		font-size:50px;
+		color: $white;
+		margin-top:20px;
+		&:hover {
+			text-decoration:none;
+			}
+		}		
+	}
+
+@media only screen and (min-width: 1080px) {
+	.side-menu {width:90px;}
+}
+
+@media only screen and (max-width: 767px) {
+	.side-menu {
+		h3, img, a {
+			display: inline-block;
+		}
+		#logo-sm {
+			width: 60px;margin-top: 0px;
+		} 
+	}
+	.col-sm-1.side-menu {
+		height: 100%;
+	}
+	.col-sm-1.side-menu a {
+		margin-top: 0px;
 	}
 }
 

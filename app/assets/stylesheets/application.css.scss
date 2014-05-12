@@ -16,6 +16,14 @@
 @import "bootstrap-changes";
 
 body {
+	font-size:20px; 
+}
+
+.menu-padding {
+	padding-top: 60px;
+}
+
+body {
 	font-family: $secondary-font;
 }
 
@@ -32,13 +40,14 @@ h1, h2, h3, h4 {
 }
 
 #logo-sm {
-	max-width: 100%;
+	max-width: 50px;
 	margin-top: 20px;
 }
 
 #bottom-logo {
 	text-align: center;
 	margin: 30px 0px;
+	max-width: 100%;
 }
 
 .top-3 {
@@ -90,6 +99,22 @@ nav #sign-up, nav #sign-in, nav #sign-out, nav #dashboard {
 	background: $red;
 	box-shadow: 0 2px 0 0 rgba(196,147,160, 0.3);
 }
+
+@media only screen and (max-width: 992px) {
+	body {font-size: 16px;}
+}
+
+@media only screen and (max-width: 670px) {
+	body {font-size: 14px;}
+}
+
+@media only screen and (max-width: 500px) {
+	body {font-size: 12px;}
+}
+
+
+
+
 
 
 

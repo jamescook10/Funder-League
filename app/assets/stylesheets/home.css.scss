@@ -10,27 +10,71 @@
 
 .hero-wrap {
 	padding-bottom: 30px;
+	background: rgba(167, 123, 182, 0.4);
+	height: 100%;
+	article {
+		padding-top: 170px;
+		color: $white;
+	}
+}
+
+.hero2-wrap {
+	background: rgba(167, 123, 182, 0.4);
+	height: 100%;
 }
 
 .league-wrap {
-	background: $purple;
+	background: $bg-black;
+	height: 100%;
 }
 
 .league-box {
 	border-radius: 5px;
-	box-shadow: 0 2px 0 0 rgba(0,0,0, 0.2);
-	background: $grey;
-	margin: 30px 10px;
+	margin: 60px 5px;
 	padding: 5px 10px;
-	height: 250px;
 	min-width: 250px;
 	cursor: pointer;
-	h1 {
+	h2 {
 		text-align: center;
+		border-radius: 5px;
+	}
+	table {
+		width: 100%;
+		.player_name span {
+			margin-left: 5%;
+		}
 	}
 	&:hover{
 		-webkit-animation: pop-out 1s;
 		-webkit-animation-fill-mode: forwards;
+	}
+	&.fifa {
+		background: $green;
+		box-shadow: 0 5px 0 0 rgba(161,196,148, 0.7);
+		h2 {
+			background: $dark-green;
+		}
+	}
+	&.pool {
+		background: $blue;
+		box-shadow: 0 5px 0 0 rgba(147,160,196, 0.7);
+		h2 {
+			background: $dark-blue;
+		}
+	}
+	&.table-tennis {
+		background: $red;
+		box-shadow: 0 5px 0 0 rgba(196,147,160, 0.7);
+		h2 {
+			background: $dark-red;
+		}
+	}
+	&.table-football {
+		background: $purple;
+		box-shadow: 0 5px 0 0 rgba(184,149,196, 0.7);
+		h2 {
+			background: $dark-purple;
+		}
 	}
 }
 
@@ -43,7 +87,46 @@
 .popup-hero{
 	text-align: center;
 }
+
 #hero {
-	margin-bottom: -30px;
-	max-width: 100%;
+		background: url(backgrounds/table_tennis2.jpg) 0% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 700px;
+    margin-bottom: -30px;
 }
+
+#hero2 {
+		background: url(backgrounds/james_pool.jpg) 0% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 500px;
+}
+
+@media only screen and (max-width: 992px) {
+	#hero {height: 500px;}
+	.hero-wrap article { padding-top: 100px;}
+}
+
+@media only screen and (max-width: 670px) {
+	#hero {height: 400px;}
+	#hero2 {height: 400px;}
+}
+
+@media only screen and (max-width: 500px) {
+	#hero {height: 300px;}
+	#hero2 {height: 300px;}
+	.hero-wrap article { padding-top: 0px;}
+	.league-box {
+		h2 {
+			margin-top: 5px;
+			margin-bottom:5px;}
+		table #avatar {display: none;}
+	}
+}
+
+

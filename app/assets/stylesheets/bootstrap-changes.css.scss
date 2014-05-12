@@ -1,13 +1,22 @@
  @import "variables";
 
+ .container, .container-fluid {
+ color: $white;
+ }
 
  body{
   background-color: $bg-grey;
   }
 
+ h1 {font-size: 2em}
+ h2 {font-size: 1.75em}
+ h3 {font-size: 1.5em}
+ h4 {font-size: 1.25em}
+ h5 {font-size: 1.1em}
+
  .navbar-default {
- 	background: $bg-black;
-  border-color: $bg-black;
+ 	background: rgba(56,64,71, 0.6);
+  border-color: rgba(56,64,71, 0.6);
  }
 
  .navbar-default .navbar-nav>li>a {
@@ -23,6 +32,7 @@
  .navbar {
  	border-radius: 0px;
  	margin-bottom: 0px;
+ 	height: 60px;
  }
 
  h3 {
@@ -58,9 +68,11 @@
 	margin: 0px;
 }
 
-/*.alert, .notice, .hero-wrap {
-	background: 
-}*/
+	.alert, .notice, {
+		top: 60px;
+		position: absolute;
+	}
+
 
 .form-group {
 	width: 48%;
@@ -71,4 +83,10 @@
 .container-fluid  {
 	padding-left: 0px;
 	padding-right: 0px;
+}
+
+@media only screen and (max-width: 767px) {
+ .navbar-collapse {
+ 	background: rgb(56,64,71);
+ }
 }

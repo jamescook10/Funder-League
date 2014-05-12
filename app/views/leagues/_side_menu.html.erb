@@ -1,8 +1,6 @@
-<div class="col-md-1 side-menu"> 
+<div class="col-sm-1 side-menu"> 
   
-  <a href="/"><%= image_tag("funderleague_logo.png", :alt => "logo", :id => "logo-sm") %></a>
-  
-  <h2>Menu</h2>
+  <a href="/"><%= image_tag("funderleague_logo_square.png", :alt => "logo", :id => "logo-sm") %></a>
   <% GameType.all.each do |gametype| %>
 	<h3><a href=""><%= gametype.name %></a></h3>
 	<% end %>

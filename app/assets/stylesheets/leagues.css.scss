@@ -9,19 +9,21 @@
 	background: $green;
 	box-shadow: 0 5px 0 0 rgba(161,196,148, 0.7);
 	border-radius: 5px;
-	/*padding: 10px;*/
 	margin: 20px 10px 50px;
 	table {
 		width: 100%;
 		margin: 20px 0px;
-		/*border-collapse:separate;*/
+		.pos {
+			margin: 10px 0px;
+			width: 10px;
+			padding-left: 3px;
+		}
 		tr th div {
 			border-radius: 5px;
 			background: $dark-green;
 			margin: 10px 15px;
 			text-align: center;
-			font-size: 28px;
-			color: $white;
+			font-size: 1.4em;
 		}
 		tr {
 			&:nth-child(2n+3) {
@@ -32,10 +34,9 @@
 			border-radius: 5px;
 			margin: 10px 15px;
 			text-align: center;
-			font-size: 20px;
-			color: $white;
+			font-size: 1em;
 			span {
-				font-size: 22px;
+				font-size: 1.1em;
 				margin-left: 5%;
 			}
 		}
@@ -47,4 +48,25 @@
 			width: 40px;
 		}
 	}
+}
+
+@media only screen and (max-width: 992px) {
+	.league table #avatar { width: 30px !important;}
+	.league table tr th div { font-size: 1.2em;}
+	.league table tr td div span {margin-left: 1%;}
+	
+}
+@media only screen and (min-width: 671px) {
+	.mobile { display:none;}
+}
+
+@media only screen and (max-width: 670px) {
+	.league table tr th div {
+		border-radius: 0px;
+		margin: 10px 0px;
+	}
+	.not-mobile {display: none;}
+}
+@media only screen and (max-width: 500px) {
+	.league table #avatar {display: none;}
 }
