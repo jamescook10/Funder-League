@@ -3,8 +3,8 @@
   <a href="/"><%= image_tag("funderleague_logo.png", :alt => "logo", :id => "logo-sm") %></a>
   
   <h2>Menu</h2>
-  <% GameType.all.each do |gametype| %>
-	<h3><a href=""><%= gametype.name %></a></h3>
+  <% @game_types.each do |gametype| %>
+	 <h3><%= link_to gametype.name, league_path(gametype) %></a></h3>
 	<% end %>
 
 </div>

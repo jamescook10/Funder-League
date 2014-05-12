@@ -1,1 +1,39 @@
-<h1><%= @game_type.name %></h1>
+<div class="container-fluid">
+
+  <%= render 'leagues/side_menu' %>
+
+  <div class="col-md-11"> 
+    
+    <h1><%= @game_type.name %></h1>
+    <div class="league">
+      <table>
+        <tr>
+          <th><div>Player Name</div></th>
+          <th><div>Played</div></th> 
+          <th><div>Win</div></th>
+          <th><div>Draw</div></th>
+          <th><div>Lose</div></th>
+          <th><div>Win%</div></th>
+        </tr>
+      <% if @players.empty? %>
+        </table>
+        <h2>Nobody has played any <%= @game_type.name.downcase %> games yet!</h2>  
+      <% else %>
+          <% @players.each do |player| %>
+            <tr>
+              <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span><%= player.full_name %></span></div></td>
+              <td><div><%= player.games.where(game_type: @game_type).count %></div></td> 
+              <td><div><%= player.games.where(winner: player, game_type:@game_type).count %></div></td>
+              <td><div><%= player.games.where(winner_id: nil, game_type:@game_type).count %></div></td>
+              <td><div><%= player.games.where(game_type:@game_type).where.not(winner: player).where.not(winner_id: nil).count %></div></td>
+              <td><div><%= sprintf("%#.2f", (player.win_percentage_for(@game_type))) %>%</div></td>
+            </tr>
+          <% end %>
+        <% end %>
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
