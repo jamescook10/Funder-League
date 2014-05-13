@@ -81,9 +81,17 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .league table #avatar { width: 30px !important;}
-  .league table tr th div { font-size: 1.2em;}
-  .league table tr td div span {margin-left: 1%;}
+  .league table {
+    #avatar {
+      width: 30px !important;
+    }
+    tr th div {
+      font-size: 1.2em;
+      span {
+        margin-left: 1%;
+      }
+    }
+  }
   
 }
 @media only screen and (min-width: 671px) {

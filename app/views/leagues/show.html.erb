@@ -3,18 +3,19 @@
 
   <%= render 'leagues/side_menu' %>
 
-  <div class="col-md-11"> 
+  <div class="col-sm-11"> 
     
     <h1><%= @game_type.name %></h1>
     <div class="league">
       <table>
         <tr>
-          <th><div>Player Name</div></th>
-          <th><div>Played</div></th> 
-          <th><div>Win</div></th>
-          <th><div>Draw</div></th>
-          <th><div>Lose</div></th>
-          <th><div>Win%</div></th>
+          <th><div class="pos"></div></th>
+          <th><div class="not-mobile">Player Name</div><div class="mobile">Name</div></th>
+          <th><div class="not-mobile">Played</div><div class="mobile">P</div></th> 
+          <th><div class="not-mobile">Win</div><div class="mobile">W</div></th>
+          <th><div class="not-mobile">Draw</div><div class="mobile">D</div></th>
+          <th><div class="not-mobile">Lose</div><div class="mobile">L</div></th>
+          <th><div class="not-mobile">Win%</div><div class="mobile">%</div></th>
         </tr>
       <% if @players.empty? %>
         </table>
@@ -22,6 +23,7 @@
       <% else %>
           <% @players.each do |player| %>
             <tr>
+              <td><div class="pos">1.</div></td>
               <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span><%= player.full_name %></span></div></td>
               <td><div><%= player.games.where(game_type: @game_type).count %></div></td> 
               <td><div><%= player.games.where(winner: player, game_type:@game_type).count %></div></td>

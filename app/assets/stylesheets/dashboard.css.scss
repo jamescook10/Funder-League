@@ -13,7 +13,6 @@ form {
 
 .side-menu {
   background: $dark-purple;
-  color: $white;
   text-align: center;
 }
 
@@ -68,7 +67,6 @@ form {
   h2 {
     margin-top: 10px;
     border-radius: 10px;
-    color: $white;
   }
 }
 
@@ -126,7 +124,6 @@ form {
   }
   h4 {
     margin-top: 20px;
-    color: $white;
     border-bottom: 2px solid $white;
     font-size: 20px;
   }
@@ -148,8 +145,8 @@ form {
     }
   a {
     font-size:50px;
-    color: $white;
     margin-top:20px;
+    color: $white;
     &:hover {
       text-decoration:none;
       color: darken($white, 20%);
