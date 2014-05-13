@@ -146,6 +146,7 @@ form {
 		margin-top:20px;
 		&:hover {
 			text-decoration:none;
+			color: darken($white, 20%);
 			}
 		}		
 	}
