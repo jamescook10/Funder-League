@@ -35,4 +35,20 @@ class Player < ActiveRecord::Base
       (wins / games) * 100
     end
   end
+
+  def count_games_for(game_type)
+    games.where(game_type: game_type).count
+  end
+
+  def count_wins_for(game_type)
+    games.where(winner: self, game_type:game_type).count
+  end
+
+  def count_draws_for(game_type)
+    games.where(winner_id: nil, game_type:game_type).count
+  end
+
+  def count_losses_for(game_type)
+    games.where(game_type:game_type).where.not(winner: self).where.not(winner_id: nil).count
+  end
 end

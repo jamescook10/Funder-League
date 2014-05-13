@@ -90,5 +90,51 @@ describe Player do
         end
       end  
     end
-  end  
+  end
+
+  describe "stats" do
+
+    let(:fifa) { create(:game_type) }
+    let(:sam) { create(:player) }
+    let(:james) { create(:player) }
+
+    before(:each) do
+      create(:game, player_id: sam.id, opponent_id: james.id, player_score: 3, opponent_score: 1, game_type: fifa)
+      create(:game, player_id: sam.id, opponent_id: james.id, player_score: 2, opponent_score: 3, game_type: fifa)
+      create(:game, player_id: sam.id, opponent_id: james.id, player_score: 1, opponent_score: 1, game_type: fifa)
+      create(:game, player_id: sam.id, opponent_id: james.id, player_score: 1, opponent_score: 1, game_type: fifa)
+    end
+
+    subject { sam }
+
+    describe "win_percentage_for" do
+      it "calculates the player's win percentage for the specified game type" do
+        expect(subject.win_percentage_for(fifa)).to eq 25.0
+      end
+    end
+
+    describe "count_games_for" do
+      it "counts the number of games a player has played of the specified game type" do
+        expect(subject.count_games_for(fifa)).to eq 4
+      end
+    end
+
+    describe "count_wins_for" do
+      it "counts the number of wins a player has of the specified game type" do
+        expect(subject.count_wins_for(fifa)).to eq 1
+      end
+    end
+
+    describe "count_draws_for" do
+      it "counts the number of draws a player has of the specified game type" do
+        expect(subject.count_draws_for(fifa)).to eq 2
+      end
+    end
+
+    describe "count_losses_for" do
+      it "counts the number of losses a player has of the specified game type" do
+        expect(subject.count_losses_for(fifa)).to eq 1
+      end
+    end
+  end
 end

@@ -47,4 +47,17 @@ describe LeaguesController do
       end
     end
   end
+
+  describe "#sort_by_win_percentage" do
+    
+    let(:fifa) { double("FIFA", name: "FIFA") }
+    let(:player1) { double("Player 1", win_percentage_for: 10.0) }
+    let(:player2) { double("Player 2", win_percentage_for: 50.0) }
+    let(:player3) { double("Player 3", win_percentage_for: 30.0) }
+    let(:player_array) { [player1, player2, player3] } 
+
+    it "sorts an array of players based on their win percentage" do
+      expect(subject.sort_by_win_percentage(player_array, fifa)).to eq [player2, player3, player1]
+    end
+  end
 end
