@@ -6,83 +6,13 @@
   <div class="col-sm-11"> 
     
     <h1>Type of League</h1>
-    <div class="league">
-      <table>
-        <tr>
-          <th><div class="pos"></div></th>
-          <th><div class="not-mobile">Player Name</div><div class="mobile">Name</div></th>
-          <th><div class="not-mobile">Played</div><div class="mobile">P</div></th> 
-          <th><div class="not-mobile">Win</div><div class="mobile">W</div></th>
-          <th><div class="not-mobile">Draw</div><div class="mobile">D</div></th>
-          <th><div class="not-mobile">Lose</div><div class="mobile">L</div></th>
-          <th><div class="not-mobile">Win%</div><div class="mobile">%</div></th>
-        </tr>
-        <tr>
-          <td><div class="pos">1.</div></td>
-          <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Sam Johnson</span></div></td>
-          <td><div>50</div></td> 
-          <td><div>36</div></td>
-          <td><div>2</div></td>
-          <td><div>12</div></td>
-          <td><div>72%</div></td>
-        </tr>
-        <tr>
-          <td><div class="pos">2.</div></td>
-          <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>James Cook</span></div></td>
-          <td><div>40</div></td> 
-          <td><div>20</div></td>
-          <td><div>8</div></td>
-          <td><div>12</div></td>
-          <td><div>50%</div></td>
-        </tr>
-        <tr>
-          <td><div class="pos">3.</div></td>
-          <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Bob Smith</span></div></td>
-          <td><div>100</div></td> 
-          <td><div>36</div></td>
-          <td><div>4</div></td>
-          <td><div>60</div></td>
-          <td><div>36%</div></td>
-        </tr>
-        <tr>
-          <td><div class="pos">4.</div></td>
-          <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Bob Smith</span></div></td>
-          <td><div>100</div></td> 
-          <td><div>36</div></td>
-          <td><div>4</div></td>
-          <td><div>60</div></td>
-          <td><div>36%</div></td>
-        </tr>
-        <tr>
-          <td><div class="pos">5.</div></td>
-          <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Bob Smith</span></div></td>
-          <td><div>100</div></td> 
-          <td><div>36</div></td>
-          <td><div>4</div></td>
-          <td><div>60</div></td>
-          <td><div>36%</div></td>
-        </tr>
-        <tr>
-          <td><div class="pos">6.</div></td>
-          <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Bob Smith</span></div></td>
-          <td><div>100</div></td> 
-          <td><div>36</div></td>
-          <td><div>4</div></td>
-          <td><div>60</div></td>
-          <td><div>36%</div></td>
-        </tr>
-        <tr>
-          <td><div class="pos">7.</div></td>
-          <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Bob Smith</span></div></td>
-          <td><div>100</div></td> 
-          <td><div>36</div></td>
-          <td><div>4</div></td>
-          <td><div>60</div></td>
-          <td><div>36%</div></td>
-        </tr>
-        
-      </table>
-
+    
+    <div class="league-select">
+      <ul>
+      <% @game_types.each do |game_type| %>
+        <li><%= link_to game_type.name, league_path(game_type) %></li>
+      <% end %>
+      </ul> 
     </div>
 
   </div>
