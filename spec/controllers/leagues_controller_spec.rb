@@ -10,9 +10,14 @@ describe LeaguesController do
 
   describe "GET #show" do
 
+    let(:fifa) { create(:game_type, name: "FIFA") }
+    let(:table_tennis) { create(:game_type, name: "Table Tennis") }
+    let(:table_football) { create(:game_type, name: "Table Football") }
+    let(:pool) { create(:game_type, name: "Pool") }
+
     context "for FIFA" do
       it "renders the FIFA league" do
-        get :show, name: "FIFA"
+        get :show, name: fifa.name
         assigns(:game_type)
         expect(response).to render_template :show
       end
@@ -20,7 +25,7 @@ describe LeaguesController do
     
     context "for Table Tennis" do
       it "renders the Table Tennis league" do
-        get :show, name: "Table Tennis"
+        get :show, name: table_tennis.name
         assigns(:game_type)
         expect(response).to render_template :show
       end
@@ -28,7 +33,7 @@ describe LeaguesController do
 
     context "for Table Football" do
       it "renders the Table Football league" do
-        get :show, name: "Table Football"
+        get :show, name: table_tennis.name
         assigns(:game_type)
         expect(response).to render_template :show
       end
@@ -36,7 +41,7 @@ describe LeaguesController do
 
     context "for Pool" do
       it "renders the Pool league" do
-        get :show, name: "Pool"
+        get :show, name: pool.name
         assigns(:game_type)
         expect(response).to render_template :show
       end
