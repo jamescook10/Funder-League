@@ -17,19 +17,19 @@
           <th><div class="not-mobile">Lose</div><div class="mobile">L</div></th>
           <th><div class="not-mobile">Win%</div><div class="mobile">%</div></th>
         </tr>
-      <% if @players.empty? %>
+      <% if @sorted_players.empty? %>
         </table>
         <h2>Nobody has played any <%= @game_type.name.downcase %> games yet!</h2>  
       <% else %>
-          <% @players.each do |player| %>
+          <% @sorted_players.each do |player| %>
             <tr>
               <td><div class="pos">1.</div></td>
               <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span><%= player.full_name %></span></div></td>
-              <td><div><%= player.games.where(game_type: @game_type).count %></div></td> 
-              <td><div><%= player.games.where(winner: player, game_type:@game_type).count %></div></td>
-              <td><div><%= player.games.where(winner_id: nil, game_type:@game_type).count %></div></td>
-              <td><div><%= player.games.where(game_type:@game_type).where.not(winner: player).where.not(winner_id: nil).count %></div></td>
-              <td><div><%= sprintf("%#.2f", (player.win_percentage_for(@game_type))) %>%</div></td>
+              <td><div><%= player.count_games_for(@game_type) %></div></td> 
+              <td><div><%= player.count_wins_for(@game_type) %></div></td>
+              <td><div><%= player.count_draws_for(@game_type) %></div></td>
+              <td><div><%= player.count_losses_for(@game_type) %></div></td>
+              <td><div><%= percentage_format(player.win_percentage_for(@game_type)) %></div></td>
             </tr>
           <% end %>
         <% end %>
