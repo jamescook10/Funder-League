@@ -1,229 +1,229 @@
 <section id="hero" data-speed="100" data-type="background">
 
-	<div class="hero-wrap">
-		<%= render 'layouts/nav' %>
-		<div class="container menu-padding">
+  <div class="hero-wrap">
+    <%= render 'layouts/nav' %>
+    <div class="container menu-padding">
 
-			<article>
+      <article>
 
-				<h1>Welcome to FunderLeague!</h1>
-				<h3>Sign up above or select below to see who is topping the league!</h3>
+        <h1>Welcome to FunderLeague!</h1>
+        <h3>Sign up above or select below to see who is topping the league!</h3>
 
-			</article>
+      </article>
 
-		</div>
-	</div>
+    </div>
+  </div>
 
 </section>
 
 <section id="about" data-speed="70" data-type="background">
 
-	<div class="league-wrap">
+  <div class="league-wrap">
 
-		<div class="container">
-			<div class="col-sm-6">
-				<div class="league-box pool">
-					<h2>Pool Table</h2>
-					<hr>
-					<table>
-						<tr>
-							<th><div class="pos"></div></th>
-							<th><div>Name</div></th>
-							<th><div>P</div></th> 
-							<th><div>W</div></th>
-							<th><div>D</div></th>
-							<th><div>L</div></th>
-							<th><div>%</div></th>
-						</tr>
-						<tr>
-							<td><div class="pos">1.</div></td>
-							<td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Sam Johnson</span></div></td>
-							<td><div>50</div></td> 
-							<td><div>36</div></td>
-							<td><div>2</div></td>
-							<td><div>12</div></td>
-							<td><div>72%</div></td>
-						</tr>
-						<tr>
-							<td><div class="pos">2.</div></td>
-							<td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>James Cook</span></div></td>
-							<td><div>40</div></td> 
-							<td><div>20</div></td>
-							<td><div>8</div></td>
-							<td><div>12</div></td>
-							<td><div>50%</div></td>
-						</tr>
-						<tr>
-							<td><div class="pos">3.</div></td>
-							<td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Bob Smith</span></div></td>
-							<td><div>100</div></td> 
-							<td><div>36</div></td>
-							<td><div>4</div></td>
-							<td><div>60</div></td>
-							<td><div>36%</div></td>
-						</tr>
-					</table>
-				</div>
-			</div>
+    <div class="container">
+      <div class="col-sm-6">
+        <div class="league-box pool">
+          <h2>Pool Table</h2>
+          <hr>
+          <table>
+            <tr>
+              <th><div class="pos"></div></th>
+              <th><div>Name</div></th>
+              <th><div>P</div></th> 
+              <th><div>W</div></th>
+              <th><div>D</div></th>
+              <th><div>L</div></th>
+              <th><div>%</div></th>
+            </tr>
+            <tr>
+              <td><div class="pos">1.</div></td>
+              <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Sam Johnson</span></div></td>
+              <td><div>50</div></td> 
+              <td><div>36</div></td>
+              <td><div>2</div></td>
+              <td><div>12</div></td>
+              <td><div>72%</div></td>
+            </tr>
+            <tr>
+              <td><div class="pos">2.</div></td>
+              <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>James Cook</span></div></td>
+              <td><div>40</div></td> 
+              <td><div>20</div></td>
+              <td><div>8</div></td>
+              <td><div>12</div></td>
+              <td><div>50%</div></td>
+            </tr>
+            <tr>
+              <td><div class="pos">3.</div></td>
+              <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Bob Smith</span></div></td>
+              <td><div>100</div></td> 
+              <td><div>36</div></td>
+              <td><div>4</div></td>
+              <td><div>60</div></td>
+              <td><div>36%</div></td>
+            </tr>
+          </table>
+        </div>
+      </div>
 
-					<div class="col-sm-6">
-						<div class="league-box table-tennis">
-							<h2>Table Tennis</h2>
-							<hr>
-							<table>
-								<tr>
-									<th><div class="pos"></div></th>
-									<th><div>Name</div></th>
-									<th><div>P</div></th> 
-									<th><div>W</div></th>
-									<th><div>D</div></th>
-									<th><div>L</div></th>
-									<th><div>%</div></th>
-								</tr>
-								<tr>
-									<td><div class="pos">1.</div></td>
-									<td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Sam Johnson</span></div></td>
-									<td><div>50</div></td> 
-									<td><div>36</div></td>
-									<td><div>2</div></td>
-									<td><div>12</div></td>
-									<td><div>72%</div></td>
-								</tr>
-								<tr>
-									<td><div class="pos">2.</div></td>
-									<td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>James Cook</span></div></td>
-									<td><div>40</div></td> 
-									<td><div>20</div></td>
-									<td><div>8</div></td>
-									<td><div>12</div></td>
-									<td><div>50%</div></td>
-								</tr>
-								<tr>
-									<td><div class="pos">3.</div></td>
-									<td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Bob Smith</span></div></td>
-									<td><div>100</div></td> 
-									<td><div>36</div></td>
-									<td><div>4</div></td>
-									<td><div>60</div></td>
-									<td><div>36%</div></td>
-								</tr>
-							</table>
-						</div>
-					</div>
+          <div class="col-sm-6">
+            <div class="league-box table-tennis">
+              <h2>Table Tennis</h2>
+              <hr>
+              <table>
+                <tr>
+                  <th><div class="pos"></div></th>
+                  <th><div>Name</div></th>
+                  <th><div>P</div></th> 
+                  <th><div>W</div></th>
+                  <th><div>D</div></th>
+                  <th><div>L</div></th>
+                  <th><div>%</div></th>
+                </tr>
+                <tr>
+                  <td><div class="pos">1.</div></td>
+                  <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Sam Johnson</span></div></td>
+                  <td><div>50</div></td> 
+                  <td><div>36</div></td>
+                  <td><div>2</div></td>
+                  <td><div>12</div></td>
+                  <td><div>72%</div></td>
+                </tr>
+                <tr>
+                  <td><div class="pos">2.</div></td>
+                  <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>James Cook</span></div></td>
+                  <td><div>40</div></td> 
+                  <td><div>20</div></td>
+                  <td><div>8</div></td>
+                  <td><div>12</div></td>
+                  <td><div>50%</div></td>
+                </tr>
+                <tr>
+                  <td><div class="pos">3.</div></td>
+                  <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Bob Smith</span></div></td>
+                  <td><div>100</div></td> 
+                  <td><div>36</div></td>
+                  <td><div>4</div></td>
+                  <td><div>60</div></td>
+                  <td><div>36%</div></td>
+                </tr>
+              </table>
+            </div>
+          </div>
 
-					<div class="col-sm-6">
-						<div class="league-box fifa">
-							<h2>Fifa</h2>
-							<hr>
-							<table>
-								<tr>
-									<th><div class="pos"></div></th>
-									<th><div>Name</div></th>
-									<th><div>P</div></th> 
-									<th><div>W</div></th>
-									<th><div>D</div></th>
-									<th><div>L</div></th>
-									<th><div>%</div></th>
-								</tr>
-								<tr>
-									<td><div class="pos">1.</div></td>
-									<td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Sam Johnson</span></div></td>
-									<td><div>50</div></td> 
-									<td><div>36</div></td>
-									<td><div>2</div></td>
-									<td><div>12</div></td>
-									<td><div>72%</div></td>
-								</tr>
-								<tr>
-									<td><div class="pos">2.</div></td>
-									<td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>James Cook</span></div></td>
-									<td><div>40</div></td> 
-									<td><div>20</div></td>
-									<td><div>8</div></td>
-									<td><div>12</div></td>
-									<td><div>50%</div></td>
-								</tr>
-								<tr>
-									<td><div class="pos">3.</div></td>
-									<td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Bob Smith</span></div></td>
-									<td><div>100</div></td> 
-									<td><div>36</div></td>
-									<td><div>4</div></td>
-									<td><div>60</div></td>
-									<td><div>36%</div></td>
-								</tr>
-							</table>
-						</div>
-					</div>
+          <div class="col-sm-6">
+            <div class="league-box fifa">
+              <h2>Fifa</h2>
+              <hr>
+              <table>
+                <tr>
+                  <th><div class="pos"></div></th>
+                  <th><div>Name</div></th>
+                  <th><div>P</div></th> 
+                  <th><div>W</div></th>
+                  <th><div>D</div></th>
+                  <th><div>L</div></th>
+                  <th><div>%</div></th>
+                </tr>
+                <tr>
+                  <td><div class="pos">1.</div></td>
+                  <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Sam Johnson</span></div></td>
+                  <td><div>50</div></td> 
+                  <td><div>36</div></td>
+                  <td><div>2</div></td>
+                  <td><div>12</div></td>
+                  <td><div>72%</div></td>
+                </tr>
+                <tr>
+                  <td><div class="pos">2.</div></td>
+                  <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>James Cook</span></div></td>
+                  <td><div>40</div></td> 
+                  <td><div>20</div></td>
+                  <td><div>8</div></td>
+                  <td><div>12</div></td>
+                  <td><div>50%</div></td>
+                </tr>
+                <tr>
+                  <td><div class="pos">3.</div></td>
+                  <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Bob Smith</span></div></td>
+                  <td><div>100</div></td> 
+                  <td><div>36</div></td>
+                  <td><div>4</div></td>
+                  <td><div>60</div></td>
+                  <td><div>36%</div></td>
+                </tr>
+              </table>
+            </div>
+          </div>
 
-					<div class="col-sm-6">
-						<div class="league-box table-football">
-							<h2>Table Football</h2>
-							<hr>
-							<table>
-								<tr>
-									<th><div class="pos"></div></th>
-									<th><div>Name</div></th>
-									<th><div>P</div></th> 
-									<th><div>W</div></th>
-									<th><div>D</div></th>
-									<th><div>L</div></th>
-									<th><div>%</div></th>
-								</tr>
-								<tr>
-									<td><div class="pos">1.</div></td>
-									<td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Sam Johnson</span></div></td>
-									<td><div>50</div></td> 
-									<td><div>36</div></td>
-									<td><div>2</div></td>
-									<td><div>12</div></td>
-									<td><div>72%</div></td>
-								</tr>
-								<tr>
-									<td><div class="pos">2.</div></td>
-									<td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>James Cook</span></div></td>
-									<td><div>40</div></td> 
-									<td><div>20</div></td>
-									<td><div>8</div></td>
-									<td><div>12</div></td>
-									<td><div>50%</div></td>
-								</tr>
-								<tr>
-									<td><div class="pos">3.</div></td>
-									<td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>James Cook</span></div></td>
-									<td><div>100</div></td> 
-									<td><div>36</div></td>
-									<td><div>4</div></td>
-									<td><div>60</div></td>
-									<td><div>36%</div></td>
-								</tr>
-							</table>
+          <div class="col-sm-6">
+            <div class="league-box table-football">
+              <h2>Table Football</h2>
+              <hr>
+              <table>
+                <tr>
+                  <th><div class="pos"></div></th>
+                  <th><div>Name</div></th>
+                  <th><div>P</div></th> 
+                  <th><div>W</div></th>
+                  <th><div>D</div></th>
+                  <th><div>L</div></th>
+                  <th><div>%</div></th>
+                </tr>
+                <tr>
+                  <td><div class="pos">1.</div></td>
+                  <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>Sam Johnson</span></div></td>
+                  <td><div>50</div></td> 
+                  <td><div>36</div></td>
+                  <td><div>2</div></td>
+                  <td><div>12</div></td>
+                  <td><div>72%</div></td>
+                </tr>
+                <tr>
+                  <td><div class="pos">2.</div></td>
+                  <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>James Cook</span></div></td>
+                  <td><div>40</div></td> 
+                  <td><div>20</div></td>
+                  <td><div>8</div></td>
+                  <td><div>12</div></td>
+                  <td><div>50%</div></td>
+                </tr>
+                <tr>
+                  <td><div class="pos">3.</div></td>
+                  <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span>James Cook</span></div></td>
+                  <td><div>100</div></td> 
+                  <td><div>36</div></td>
+                  <td><div>4</div></td>
+                  <td><div>60</div></td>
+                  <td><div>36%</div></td>
+                </tr>
+              </table>
 
-						</div>
-					</div>
+            </div>
+          </div>
 
-				</div>
-
-
-
-			</div>
-
-		</section>
-
-		<section id="hero2" data-speed="200" data-type="background">
-
-			<div class="hero2-wrap">
-
-				<div class="container"> 
-
-					<article>
+        </div>
 
 
 
-					</article>
+      </div>
 
-				</div>
+    </section>
 
-			</div>
+    <section id="hero2" data-speed="200" data-type="background">
 
-		</section>
+      <div class="hero2-wrap">
+
+        <div class="container"> 
+
+          <article>
+
+
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>

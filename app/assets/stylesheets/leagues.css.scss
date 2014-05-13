@@ -6,67 +6,97 @@
 @import "variables";
 
 .league {
-	background: $green;
-	box-shadow: 0 5px 0 0 rgba(161,196,148, 0.7);
-	border-radius: 5px;
-	margin: 20px 10px 50px;
-	table {
-		width: 100%;
-		margin: 20px 0px;
-		.pos {
-			margin: 10px 0px;
-			width: 10px;
-			padding-left: 3px;
-		}
-		tr th div {
-			border-radius: 5px;
-			background: $dark-green;
-			margin: 10px 15px;
-			text-align: center;
-			font-size: 1.4em;
-		}
-		tr {
-			&:nth-child(2n+3) {
-				background: $dark-green;
-			}
-		}
-		tr td div {
-			border-radius: 5px;
-			margin: 10px 15px;
-			text-align: center;
-			font-size: 1em;
-			span {
-				font-size: 1.1em;
-				margin-left: 5%;
-			}
-		}
-		.player_name {
-			margin-left: 5%;
-			text-align: left;
-		}
-		#avatar {
-			width: 40px;
-		}
-	}
+  background: $green;
+  box-shadow: 0 5px 0 0 rgba(161,196,148, 0.7);
+  border-radius: 5px;
+  margin: 20px 10px 50px;
+  table {
+    width: 100%;
+    margin: 20px 0px;
+    .pos {
+      margin: 10px 0px;
+      width: 10px;
+      padding-left: 3px;
+    }
+    tr th div {
+      border-radius: 5px;
+      background: $dark-green;
+      margin: 10px 15px;
+      text-align: center;
+      font-size: 1.4em;
+    }
+    tr {
+      &:nth-child(2n+3) {
+        background: $dark-green;
+      }
+    }
+    tr td div {
+      border-radius: 5px;
+      margin: 10px 15px;
+      text-align: center;
+      font-size: 1em;
+      span {
+        font-size: 1.1em;
+        margin-left: 5%;
+      }
+    }
+    .player_name {
+      margin-left: 5%;
+      text-align: left;
+    }
+    #avatar {
+      width: 40px;
+    }
+  }
+}
+.bg-hero {
+  &.fifa{
+    background: url(backgrounds/table_tennis2.jpg) 0% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  &.table-football{
+    background: url(backgrounds/table_tennis2.jpg) 0% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  &.table-tennis{
+    background: url(backgrounds/table_tennis2.jpg) 0% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  &.pool{
+    background: url(backgrounds/table_tennis2.jpg) 0% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 }
 
 @media only screen and (max-width: 992px) {
-	.league table #avatar { width: 30px !important;}
-	.league table tr th div { font-size: 1.2em;}
-	.league table tr td div span {margin-left: 1%;}
-	
+  .league table #avatar { width: 30px !important;}
+  .league table tr th div { font-size: 1.2em;}
+  .league table tr td div span {margin-left: 1%;}
+  
 }
 @media only screen and (min-width: 671px) {
-	.mobile { display:none;}
+  .mobile { display:none;}
 }
 
 @media only screen and (max-width: 670px) {
-	.league table tr th div {
-		border-radius: 0px;
-		margin: 10px 0px;
-	}
-	.not-mobile {display: none;}
+  .league table tr th div {
+    border-radius: 0px;
+    margin: 10px 0px;
+  }
+  .not-mobile {display: none;}
 }
 @media only screen and (max-width: 500px) {
-	.league table #avatar {display: none;}
+  .league table #avatar {display: none;}
 }

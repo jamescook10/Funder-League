@@ -16,87 +16,87 @@
 @import "bootstrap-changes";
 
 body {
-	font-size:20px; 
+  font-size:20px; 
 }
 
 .menu-padding {
-	padding-top: 60px;
+  padding-top: 60px;
 }
 
 body {
-	font-family: $secondary-font;
+  font-family: $secondary-font;
 }
 
 h1, h2, h3, h4 {
-	font-family: $primary-font
+  font-family: $primary-font
 }
 
 .footer-wrap{
-	background: $bg-black;
+  background: $bg-black;
 }
 
 #logo {
-	height: 40px;
+  height: 40px;
 }
 
 #logo-sm {
-	max-width: 50px;
-	margin-top: 20px;
+  max-width: 50px;
+  margin-top: 20px;
 }
 
 #bottom-logo {
-	text-align: center;
-	margin: 30px 0px;
-	max-width: 100%;
+  text-align: center;
+  margin: 30px 0px;
+  max-width: 100%;
 }
 
 #avatar {
-	width: 30px;
-	border-radius: 50%;
-	background: black;
-	margin-bottom: 5px;
+  width: 30px;
+  border-radius: 50%;
+  background: black;
+  margin-bottom: 5px;
 }
 
 #sign-up, #sign-in, #sign-out, #dashboard {
-	border-radius: 2px;
-	padding: 5px 15px 5px;
-	color: $white;
+  border-radius: 2px;
+  padding: 5px 15px 5px;
+  color: $white;
 }
 
 nav #sign-up, nav #sign-in, nav #sign-out, nav #dashboard {
-	margin: 13px 10px 13px;
+  margin: 13px 10px 13px;
 }
 
 #sign-up {
-	background: $green;
-	box-shadow: 0 2px 0 0 rgba(161,196,148, 0.3);
+  background: $green;
+  box-shadow: 0 2px 0 0 rgba(161,196,148, 0.3);
 }
 
 #sign-in {
-	background: $purple;
-	box-shadow: 0 2px 0 0 rgba(142,68,173, 0.3);
+  background: $purple;
+  box-shadow: 0 2px 0 0 rgba(142,68,173, 0.3);
 }
 
 #dashboard {
-	background: $blue;
-	box-shadow: 0 2px 0 0 rgba(147,160,196, 0.3);
+  background: $blue;
+  box-shadow: 0 2px 0 0 rgba(147,160,196, 0.3);
 }
 
 #sign-out {
-	background: $red;
-	box-shadow: 0 2px 0 0 rgba(196,147,160, 0.3);
+  background: $red;
+  box-shadow: 0 2px 0 0 rgba(196,147,160, 0.3);
 }
 
 @media only screen and (max-width: 992px) {
-	body {font-size: 16px;}
+  body {font-size: 16px;}
 }
 
 @media only screen and (max-width: 670px) {
-	body {font-size: 14px;}
+  body {font-size: 14px;}
 }
 
 @media only screen and (max-width: 500px) {
-	body {font-size: 12px;}
+  body {font-size: 12px;}
 }
 
 

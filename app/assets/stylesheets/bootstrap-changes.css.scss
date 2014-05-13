@@ -8,31 +8,31 @@
   background-color: $bg-grey;
   }
 
- h1 {font-size: 2em}
+ h1 {font-size: 2.5em}
  h2 {font-size: 1.75em}
  h3 {font-size: 1.5em}
  h4 {font-size: 1.25em}
  h5 {font-size: 1.1em}
 
  .navbar-default {
- 	background: rgba(56,64,71, 0.6);
+  background: rgba(56,64,71, 0.6);
   border-color: rgba(56,64,71, 0.6);
  }
 
  .navbar-default .navbar-nav>li>a {
- 	color: $purple;
- 	font-size: 16px;
- 	font-weight: 400;
+  color: $purple;
+  font-size: 16px;
+  font-weight: 400;
  } 
 
  .navbar-brand {
- 	padding: 5px;
+  padding: 5px;
  }
 
  .navbar {
- 	border-radius: 0px;
- 	margin-bottom: 0px;
- 	height: 60px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  height: 60px;
  }
 
  h3 {
@@ -40,53 +40,53 @@
  }
 
  .dropdown-menu {
- 	background: $grey;
- 	border: 1.5px solid $purple;
- 	border-radius: 5px;
- 	li>a { 
- 		color: $purple;
- 	}
+  background: $grey;
+  border: 1.5px solid $purple;
+  border-radius: 5px;
+  li>a { 
+    color: $purple;
+  }
  }
 
  hr {
- 	margin: 10px 0px;
- 	border-top: 1px solid #555;
+  margin: 10px 0px;
+  border-top: 1px solid #555;
  }
 
  input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
- 	border: none;
+  border: none;
  }
 
  .new_player div {
- 	&>input {
- 	border-radius: 5px;
- 	margin: 5px 0px;
- 	}
+  &>input {
+  border-radius: 5px;
+  margin: 5px 0px;
+  }
 }
 
  .alert, .notice {
-	margin: 0px;
+  margin: 0px;
 }
 
-	.alert, .notice, {
-		top: 60px;
-		position: absolute;
-	}
+  .alert, .notice, {
+    top: 60px;
+    position: absolute;
+  }
 
 
 .form-group {
-	width: 48%;
-	float: left;
-	margin-right: 5px; 
+  width: 48%;
+  float: left;
+  margin-right: 5px; 
 }
 
 .container-fluid  {
-	padding-left: 0px;
-	padding-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 @media only screen and (max-width: 767px) {
  .navbar-collapse {
- 	background: rgb(56,64,71);
+  background: rgb(56,64,71);
  }
 }

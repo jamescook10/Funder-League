@@ -1,8 +1,8 @@
 class LeaguesController < ApplicationController
 
-	def index
+  def index
     @game_types = GameType.all
-	end
+  end
 
   def show
     @game_types = GameType.all
@@ -11,7 +11,6 @@ class LeaguesController < ApplicationController
     @players.sort! do |a,b|
       b.win_percentage_for(@game_type) <=> a.win_percentage_for(@game_type) 
     end
-
-
   end
+  
 end

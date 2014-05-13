@@ -5,170 +5,176 @@
 @import "variables";
 
 form {
-	&>input {
-		border-radius: 5px;
-		margin: 5px 0px;
-	}
+  &>input {
+    border-radius: 5px;
+    margin: 5px 0px;
+  }
 }
 
 .side-menu {
-	background: $dark-purple;
-	color: $white;
-	text-align: center;
+  background: $dark-purple;
+  color: $white;
+  text-align: center;
 }
 
 .new-result {
-	background: $green;
-	border-radius: 5px;
-	box-shadow: 0 4px 0 0 rgba(161,196,148, 0.4);
-	padding: 10px;
-	margin: 10px;
+  background: $green;
+  border-radius: 5px;
+  box-shadow: 0 4px 0 0 rgba(161,196,148, 0.4);
+  padding: 10px;
+  margin: 10px;
 }
 
 .game-stat {
-	border-radius: 5px;
-	padding: 2px 10px 10px 10px;
-	margin: 10px;
-	&.fifa {
-		background: $green;
-		box-shadow: 0 5px 0 0 rgba(161,196,148, 0.7);
-		h2 {
-			background: $dark-green;
-		}
-	}
-	&.pool {
-		background: $blue;
-		box-shadow: 0 5px 0 0 rgba(147,160,196, 0.7);
-		h2 {
-			background: $dark-blue;
-		}
-	}
-	&.table-tennis {
-		background: $red;
-		box-shadow: 0 5px 0 0 rgba(196,147,160, 0.7);
-		h2 {
-			background: $dark-red;
-		}
-	}
-	&.table-football {
-		background: $purple;
-		box-shadow: 0 5px 0 0 rgba(184,149,196, 0.7);
-		h2 {
-			background: $dark-purple;
-		}
-	}
-	div {
-		font-size: 600%;
-	}
+  border-radius: 5px;
+  padding: 2px 10px 10px 10px;
+  margin: 10px;
+  &.fifa {
+    background: $green;
+    box-shadow: 0 5px 0 0 rgba(161,196,148, 0.7);
+    h2 {
+      background: $dark-green;
+    }
+  }
+  &.pool {
+    background: $blue;
+    box-shadow: 0 5px 0 0 rgba(147,160,196, 0.7);
+    h2 {
+      background: $dark-blue;
+    }
+  }
+  &.table-tennis {
+    background: $red;
+    box-shadow: 0 5px 0 0 rgba(196,147,160, 0.7);
+    h2 {
+      background: $dark-red;
+    }
+  }
+  &.table-football {
+    background: $purple;
+    box-shadow: 0 5px 0 0 rgba(184,149,196, 0.7);
+    h2 {
+      background: $dark-purple;
+    }
+  }
+  div {
+    font-size: 600%;
+  }
 }
 
 .cont {
-	width: 660px;
-	margin: auto;
-	h2 {
-		margin-top: 10px;
-		border-radius: 10px;
-		color: $white;
-	}
+  width: 660px;
+  margin: auto;
+  h2 {
+    margin-top: 10px;
+    border-radius: 10px;
+    color: $white;
+  }
 }
 
 
 .result {
-	border-radius: 5px;
-	padding: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 30px; 
-	height: 210px;
-	&.fifa {
-		background: $green;
-		box-shadow: 0 5px 0 0 rgba(161,196,148, 0.7);
-		.cont h2 {
-			background: $dark-green;
-		}
-	}
-	&.pool {
-		background: $blue;
-		box-shadow: 0 5px 0 0 rgba(147,160,196, 0.7);
-		.cont h2 {
-			background: $dark-blue;
-			
-		}
-	}
-	&.table-tennis {
-		background: $red;
-		box-shadow: 0 5px 0 0 rgba(196,147,160, 0.7);
-		.cont h2 {
-			background: $dark-red;
-		}
-	}
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px; 
+  height: 210px;
+  &.fifa {
+    background: $green;
+    box-shadow: 0 5px 0 0 rgba(161,196,148, 0.7);
+    .cont h2 {
+      background: $dark-green;
+    }
+  }
+  &.pool {
+    background: $blue;
+    box-shadow: 0 5px 0 0 rgba(147,160,196, 0.7);
+    .cont h2 {
+      background: $dark-blue;
+    }
+  }
+  &.table-tennis {
+    background: $red;
+    box-shadow: 0 5px 0 0 rgba(196,147,160, 0.7);
+    .cont h2 {
+      background: $dark-red;
+    }
+  }
+  &.table-football {
+    background: $purple;
+    box-shadow: 0 5px 0 0 rgba(184,149,196, 0.7);
+    h2 {
+      background: $dark-purple;
+    }
+  }
 }
 
 .result-box {
-	background: $white;
-	height:100px; 
-	width:40%;
-	border-radius: 5px;
-	box-shadow: 4px 4px 0px 1px rgba(220, 220, 220, 0.6);
-	display: inline-block;
-	float: left;
-	h3 {
-		font-size: 120px;
-		line-height:0.8;
-		margin-top: 0px;
-		color: $bg-black;
-	}
-	h4 {
-		margin-top: 20px;
-		color: $white;
-		border-bottom: 2px solid $white;
-		font-size: 20px;
-	}
+  background: $white;
+  height:100px; 
+  width:40%;
+  border-radius: 5px;
+  box-shadow: 4px 4px 0px 1px rgba(220, 220, 220, 0.6);
+  display: inline-block;
+  float: left;
+  h3 {
+    font-size: 120px;
+    line-height:0.8;
+    margin-top: 0px;
+    color: $bg-black;
+  }
+  h4 {
+    margin-top: 20px;
+    color: $white;
+    border-bottom: 2px solid $white;
+    font-size: 20px;
+  }
 }
 
 .vs {
-	width: 20%;
-	h3 {
-		margin-top: 35px;
-	}
+  width: 20%;
+  h3 {
+    margin-top: 35px;
+  }
 }
 
 .col-sm-1.side-menu {
-	padding-left: 0px;
-	padding-right: 0px;
-	height: 1600px;
-	h3 a {
-		font-size:24px;
-		}
-	a {
-		font-size:50px;
-		color: $white;
-		margin-top:20px;
-		&:hover {
-			text-decoration:none;
-			}
-		}		
-	}
+  padding-left: 0px;
+  padding-right: 0px;
+  height: 1600px;
+  h3 a {
+    font-size:24px;
+    }
+  a {
+    font-size:50px;
+    color: $white;
+    margin-top:20px;
+    &:hover {
+      text-decoration:none;
+      }
+    }   
+  }
 
 @media only screen and (min-width: 1080px) {
-	.side-menu {width:90px;}
+  .side-menu {width:90px;}
 }
 
 @media only screen and (max-width: 767px) {
-	.side-menu {
-		h3, img, a {
-			display: inline-block;
-		}
-		#logo-sm {
-			width: 60px;margin-top: 0px;
-		} 
-	}
-	.col-sm-1.side-menu {
-		height: 100%;
-	}
-	.col-sm-1.side-menu a {
-		margin-top: 0px;
-	}
+  .side-menu {
+    h3, img, a {
+      display: inline-block;
+    }
+    #logo-sm {
+      width: 60px;margin-top: 0px;
+    } 
+  }
+  .col-sm-1.side-menu {
+    height: 100%;
+  }
+  .col-sm-1.side-menu a {
+    margin-top: 0px;
+  }
 }
 
 
