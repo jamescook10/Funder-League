@@ -49,39 +49,38 @@
 
     <h1>Stats Central</h1>
 
-    <% GameType.all.each do |gametype| %>
+    <% @game_types.each do |gametype| %>
     <h2><%= gametype.name %></h2>
     
     <div class="row" style="text-align:center;">
       <div class="col-md-4">
         <div class="game-stat <%= gametype.name.downcase.split.join('-') %>">
           <h3>Win %</h3>
-          <div class="glyphicon glyphicon-adjust"></div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="game-stat <%= gametype.name.downcase.split.join('-') %>">
-          <h3>Position</h3>
-          <div class="glyphicon glyphicon-adjust"></div>
+          <canvas id="canvas" height="250" width="250"></canvas>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="game-stat <%= gametype.name.downcase.split.join('-') %>">
           <h3>Games played</h3>
-          <div class="glyphicon glyphicon-adjust"></div>
+          <canvas id="canvas2" height="250" width="250"></canvas>
+
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="game-stat <%= gametype.name.downcase.split.join('-') %>">
+          <h3>Position</h3>
+          <canvas id="canvas3" height="250" width="250"></canvas>
         </div>
       </div>
     </div>
-
     <% end %>
 
   </div>
 
-  
-
 </div>
+
 
 
 

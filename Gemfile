@@ -45,6 +45,7 @@ group :test, :development do
   gem 'capybara-screenshot'
 end
 
+gem 'chart-js-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
