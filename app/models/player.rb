@@ -51,4 +51,13 @@ class Player < ActiveRecord::Base
   def count_losses_for(game_type)
     games.where(game_type:game_type).where.not(winner: self).where.not(winner_id: nil).count
   end
+
+  def league_position_for(game_type)
+    players = game_type.players
+    if players.include?(self)
+      players.sort { |a,b| b.win_percentage_for(game_type) <=> a.win_percentage_for(game_type) }.index(self) + 1
+    else
+      nil
+    end
+  end
 end

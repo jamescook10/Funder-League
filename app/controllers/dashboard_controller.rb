@@ -7,7 +7,7 @@ class DashboardController < ApplicationController
   def index
     @game = Game.new
     @game_types = GameType.all
-    @player_data = DashboardPresenter.new(current_player)
+    
   end 
 
 end

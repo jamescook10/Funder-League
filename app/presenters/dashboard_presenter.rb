@@ -13,7 +13,6 @@ class DashboardPresenter
   def set_instance_variables
     @game_types.each do |game_type|
       self.class.send(:define_method, game_type.name.parameterize.underscore) { instance_variable_set("@#{game_type.name.parameterize.underscore}", {}) }
-      require 'pry'; binding.pry
       @games[game_type.name.parameterize.underscore.to_sym] = "@#{game_type.name.parameterize.underscore}"
     end
   end

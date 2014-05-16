@@ -101,6 +101,7 @@ describe Player do
     before(:each) do
       create(:game, player_id: sam.id, opponent_id: james.id, player_score: 3, opponent_score: 1, game_type: fifa)
       create(:game, player_id: sam.id, opponent_id: james.id, player_score: 2, opponent_score: 3, game_type: fifa)
+      create(:game, player_id: sam.id, opponent_id: james.id, player_score: 2, opponent_score: 3, game_type: fifa)
       create(:game, player_id: sam.id, opponent_id: james.id, player_score: 1, opponent_score: 1, game_type: fifa)
       create(:game, player_id: sam.id, opponent_id: james.id, player_score: 1, opponent_score: 1, game_type: fifa)
     end
@@ -109,13 +110,13 @@ describe Player do
 
     describe "win_percentage_for" do
       it "calculates the player's win percentage for the specified game type" do
-        expect(subject.win_percentage_for(fifa)).to eq 25.0
+        expect(subject.win_percentage_for(fifa)).to eq 20.0
       end
     end
 
     describe "count_games_for" do
       it "counts the number of games a player has played of the specified game type" do
-        expect(subject.count_games_for(fifa)).to eq 4
+        expect(subject.count_games_for(fifa)).to eq 5
       end
     end
 
@@ -133,7 +134,13 @@ describe Player do
 
     describe "count_losses_for" do
       it "counts the number of losses a player has of the specified game type" do
-        expect(subject.count_losses_for(fifa)).to eq 1
+        expect(subject.count_losses_for(fifa)).to eq 2
+      end
+    end
+
+    describe "league_position_for" do
+      it "calculates the league position for the current player in the specified league" do
+        expect(subject.league_position_for(fifa)).to eq 2
       end
     end
   end
