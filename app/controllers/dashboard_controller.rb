@@ -6,8 +6,7 @@ class DashboardController < ApplicationController
 
   def index
     @game = Game.new
-    @game_types = GameType.all
-    
+    @game_types = GameType.all    
   end 
 
 end

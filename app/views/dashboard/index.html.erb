@@ -56,33 +56,31 @@
       <div class="col-md-4">
         <div class="game-stat <%= game_type.name.downcase.split.join('-') %>">
           <h3>Win %</h3>
-          <%= current_player.win_percentage_for(game_type) %>
-          <!-- <div class="glyphicon glyphicon-adjust"></div> -->
+          <canvas id="canvas" height="250" width="250"></canvas>
         </div>
       </div>
 
       <div class="col-md-4">
-        <div class="game-stat <%= game_type.name.downcase.split.join('-') %>">
-          <h3>Position</h3>
-          <div class="glyphicon glyphicon-adjust"></div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="game-stat <%= game_type.name.downcase.split.join('-') %>">
+        <div class="game-stat <%= gametype.name.downcase.split.join('-') %>">
           <h3>Games played</h3>
-          <div class="glyphicon glyphicon-adjust"></div>
+          <canvas id="canvas2" height="250" width="250"></canvas>
+
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="game-stat <%= gametype.name.downcase.split.join('-') %>">
+          <h3>Position</h3>
+          <canvas id="canvas3" height="250" width="250"></canvas>
         </div>
       </div>
     </div>
-
     <% end %>
 
   </div>
 
-  
-
 </div>
+
 
 
 
