@@ -16,7 +16,6 @@ class DashboardPresenter
 
   def list_opponents
     opponents = Player.all
-    opponents.delete(@current_player)
-    opponents
+    opponents - [@current_player]
   end
 end
