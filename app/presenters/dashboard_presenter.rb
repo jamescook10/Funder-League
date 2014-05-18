@@ -1,7 +1,5 @@
 class DashboardPresenter
 
-  attr_reader :current_player, :game_types, :games
-
   def initialize(current_player)
     @game_types = GameType.all
     @current_player = current_player
