@@ -4,10 +4,11 @@ describe DashboardPresenter do
 
   subject { DashboardPresenter.new(player) }
 
+  let!(:player) { create(:player) }
+  let!(:opponent) { create(:player) }
+
   describe '#count_wins_for_all_games' do
 
-    let!(:player) { create(:player) }
-    let!(:opponent) { create(:player) }
     let!(:fifa) { create(:game_type, name: "FIFA", color: "#000000") }
     let!(:pool) { create(:game_type, name: "Pool", color: "#000000") }
     let!(:game1) { create(:game, game_type: fifa, player_id: player.id, player_score: 2, opponent_id: opponent.id, opponent_score: 0) }
@@ -22,6 +23,13 @@ describe DashboardPresenter do
     it 'returns the correct amount of wins for each game' do
       expect(subject.count_wins_for_all_games).to eq({games_played: {fifa: {value: 3, color:"#000000"}, pool: {value: 1, color: "#000000"}}})
     end
-    
+
+  end
+
+  describe '#list_opponents' do
+    it 'lists all players except current player' do
+      expect(subject.list_opponents).to_not include(player)
+      expect(subject.list_opponents).to include(opponent)
+    end
   end
 end

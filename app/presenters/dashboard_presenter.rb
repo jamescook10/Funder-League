@@ -13,4 +13,10 @@ class DashboardPresenter
     end
     return wins
   end
+
+  def list_opponents
+    opponents = Player.all
+    opponents.delete(@current_player)
+    opponents
+  end
 end
