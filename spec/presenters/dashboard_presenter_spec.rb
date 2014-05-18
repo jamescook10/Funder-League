@@ -31,5 +31,10 @@ describe DashboardPresenter do
       expect(subject.list_opponents).to_not include(player)
       expect(subject.list_opponents).to include(opponent)
     end
+
+    it 'does not destructively delete current player' do
+      subject.list_opponents
+      expect(Player.all).to include(player)
+    end
   end
 end
