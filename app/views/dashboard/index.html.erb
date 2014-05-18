@@ -47,35 +47,43 @@
       <% end %>
     </div> 
 
-    <h1>Stats Central</h1>
-
-    <% @game_types.each do |game_type| %>
-    <h2><%= game_type.name %></h2>
+    <div class="game-stats-panel">
+      <h2>Your Game Stats:</h2>
+      
+      <div class="row" style="text-align:center;">
+        <div class="col-md-4">
+          <div class="game-stat">
+            <h3>Win %</h3>
+            <div class="chart">
+              <canvas id="win-percentage" height="250" width="250"></canvas>
+            </div>
+            
+            <%# @game_types.each do |game_type| %>
+              <%#= current_player.count_wins_for(game_type) %>
+            <%# end %>
+          </div>
+        </div>
+    </div>
     
-    <div class="row" style="text-align:center;">
-      <div class="col-md-4">
-        <div class="game-stat <%= game_type.name.downcase.split.join('-') %>">
-          <h3>Win %</h3>
-          <canvas id="canvas" height="250" width="250"></canvas>
-        </div>
-      </div>
 
       <div class="col-md-4">
-        <div class="game-stat <%= gametype.name.downcase.split.join('-') %>">
+        <div class="game-stat">
           <h3>Games played</h3>
-          <canvas id="canvas2" height="250" width="250"></canvas>
+          <%= content_tag "div", id: "games-played", data: @data.count_wins_for_all_games do %>
+            <canvas height="250" width="250"></canvas>
+          <% end %>
+          
 
         </div>
       </div>
 
       <div class="col-md-4">
-        <div class="game-stat <%= gametype.name.downcase.split.join('-') %>">
+        <div class="game-stat">
           <h3>Position</h3>
-          <canvas id="canvas3" height="250" width="250"></canvas>
+          <canvas id="league-position" height="250" width="250"></canvas>
         </div>
       </div>
     </div>
-    <% end %>
 
   </div>
 
