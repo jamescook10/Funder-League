@@ -1,18 +1,22 @@
 <%= render 'layouts/nav' %>
-<div class="container-fluid menu-padding bg-hero fifa">
+<div class="container-fluid menu-padding">
 
   <%= render 'leagues/side_menu' %>
 
   <div class="col-sm-11"> 
     
-    <h1>Type of League</h1>
-    
-    <div class="league-select">
-      <ul>
-      <% @game_types.each do |game_type| %>
-        <li><%= link_to game_type.name, league_path(game_type) %></li>
+    <h1>Select your league:</h1>
+
+    <div class="row" style="text-align:center;">
+      
+      <% @game_types.each do |game_type| %> 
+        <div class="col-md-6">
+          <div class="league-button">
+            <%= link_to game_type.name, league_path(game_type) %>
+          </div>
+        </div>
       <% end %>
-      </ul> 
+      
     </div>
 
   </div>

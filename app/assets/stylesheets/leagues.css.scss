@@ -49,36 +49,49 @@
     }
   }
 }
-.bg-hero {
-  &.fifa{
-    background: url(backgrounds/table_tennis2.jpg) 0% 0 no-repeat fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  &.table-football{
-    background: url(backgrounds/table_tennis2.jpg) 0% 0 no-repeat fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  &.table-tennis{
-    background: url(backgrounds/table_tennis2.jpg) 0% 0 no-repeat fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  &.pool{
-    background: url(backgrounds/table_tennis2.jpg) 0% 0 no-repeat fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+
+.league-button {
+  border-radius: 5px;
+  padding: 2px 10px 10px 10px;
+  margin: 10px;
+  background: rgba(56, 64, 71, 0.8);
 }
+
+.hero-wrap2 {
+  background: rgba(167, 123, 182, 0.4);
+  height: 100%;
+}
+
+
+  #fifa{
+    background: url(backgrounds/break_out.jpg) 0% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  #table-football{
+    background: url(backgrounds/table_tennis2.jpg) 0% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  #table-tennis{
+    background: url(backgrounds/table_tennis3.jpg) 0% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  #pool{
+    background: url(backgrounds/james_pool.jpg) 0% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
 
 @media only screen and (max-width: 992px) {
   .league table {

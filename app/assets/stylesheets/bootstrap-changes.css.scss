@@ -64,6 +64,16 @@
   }
 }
 
+a {
+  color: $white;
+  &:hover, &:focus  {
+    color: $green;
+    text-decoration: underline;
+  }
+}
+
+
+
  .alert, .notice {
   margin: 0px;
 }

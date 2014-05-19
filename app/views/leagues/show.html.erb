@@ -1,42 +1,49 @@
-<%= render 'layouts/nav' %>
-<div class="container-fluid menu-padding">
+<section id="<%= @game_type.name.downcase.split.join('-') %>" data-speed="100" data-type="background">
 
-  <%= render 'leagues/side_menu' %>
+  <div class="hero-wrap2">
 
-  <div class="col-sm-11"> 
-    
-    <h1><%= @game_type.name %></h1>
-    <div class="league">
-      <table>
-        <tr>
-          <th><div class="pos"></div></th>
-          <th><div class="not-mobile">Player Name</div><div class="mobile">Name</div></th>
-          <th><div class="not-mobile">Played</div><div class="mobile">P</div></th> 
-          <th><div class="not-mobile">Win</div><div class="mobile">W</div></th>
-          <th><div class="not-mobile">Draw</div><div class="mobile">D</div></th>
-          <th><div class="not-mobile">Lose</div><div class="mobile">L</div></th>
-          <th><div class="not-mobile">Win%</div><div class="mobile">%</div></th>
-        </tr>
-      <% if @sorted_players.empty? %>
-        </table>
-        <h2>Nobody has played any <%= @game_type.name.downcase %> games yet!</h2>  
-      <% else %>
-          <% @sorted_players.each do |player| %>
+    <%= render 'layouts/nav' %>
+    <div class="container-fluid menu-padding">
+
+
+      <%= render 'leagues/side_menu' %>
+
+      <div class="col-sm-11"> 
+
+        <h1><%= @game_type.name %></h1>
+        <div class="league">
+          <table>
             <tr>
-              <td><div class="pos">1.</div></td>
-              <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span><%= player.full_name %></span></div></td>
-              <td><div><%= player.count_games_for(@game_type) %></div></td> 
-              <td><div><%= player.count_wins_for(@game_type) %></div></td>
-              <td><div><%= player.count_draws_for(@game_type) %></div></td>
-              <td><div><%= player.count_losses_for(@game_type) %></div></td>
-              <td><div><%= percentage_format(player.win_percentage_for(@game_type)) %></div></td>
+              <th><div class="pos"></div></th>
+              <th><div class="not-mobile">Player Name</div><div class="mobile">Name</div></th>
+              <th><div class="not-mobile">Played</div><div class="mobile">P</div></th> 
+              <th><div class="not-mobile">Win</div><div class="mobile">W</div></th>
+              <th><div class="not-mobile">Draw</div><div class="mobile">D</div></th>
+              <th><div class="not-mobile">Lose</div><div class="mobile">L</div></th>
+              <th><div class="not-mobile">Win%</div><div class="mobile">%</div></th>
             </tr>
+            <% if @sorted_players.empty? %>
+          </table>
+          <h2>Nobody has played any <%= @game_type.name.downcase %> games yet!</h2>  
+          <% else %>
+          <% @sorted_players.each do |player| %>
+          <tr>
+            <td><div class="pos">1.</div></td>
+            <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span><%= player.full_name %></span></div></td>
+            <td><div><%= player.count_games_for(@game_type) %></div></td> 
+            <td><div><%= player.count_wins_for(@game_type) %></div></td>
+            <td><div><%= player.count_draws_for(@game_type) %></div></td>
+            <td><div><%= player.count_losses_for(@game_type) %></div></td>
+            <td><div><%= percentage_format(player.win_percentage_for(@game_type)) %></div></td>
+          </tr>
           <% end %>
-        <% end %>
-      </table>
+          <% end %>
+        </table>
 
+      </div>
     </div>
-
   </div>
-
 </div>
+
+</section>
+
