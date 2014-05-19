@@ -7,13 +7,13 @@ class DashboardPresenter
     @current_player = current_player
   end
 
-  def count_wins_for_all_games
-    wins = {games_played: {} }
+  def count_games_played_for_all_games
+    games_played = {games_played: {} }
     @game_types.each do |game_type|
       game_type_name = game_type.name.downcase.tr(' ', '_').to_sym
-      wins[:games_played][game_type_name] = { value: @current_player.count_wins_for(game_type), color: game_type.color }
+      games_played[:games_played][game_type_name] = { value: @current_player.count_games_for(game_type), color: game_type.color }
     end
-    return wins
+    return games_played
   end
 
   def win_percentages_for_chart(game_type)

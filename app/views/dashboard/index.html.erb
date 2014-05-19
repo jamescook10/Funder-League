@@ -54,7 +54,7 @@
         <div class="col-md-4">
           <div class="game-stat">
             <h3>Games played</h3>
-            <%= content_tag "div", id: "games-played", data: @data.count_wins_for_all_games do %>
+            <%= content_tag "div", id: "games-played", data: @data.count_games_played_for_all_games do %>
               <canvas height="250" width="250"></canvas>
             <% end %>
           </div>
