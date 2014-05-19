@@ -6,10 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-GameType.create(name: "FIFA")
-GameType.create(name: "Table Tennis")
-GameType.create(name: "Pool")
-GameType.create(name: "Table Football")
+GameType.create(name: "FIFA", color: "#8ab67a")
+GameType.create(name: "Table Tennis", color: "#b67989")
+GameType.create(name: "Pool", color: "#7989b6")
+GameType.create(name: "Table Football", color: "#A77BB6")
 
 
 10.times do
