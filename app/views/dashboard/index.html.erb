@@ -51,7 +51,7 @@
       
       <div class="row" style="text-align:center;">
 
-        <div class="col-md-4">
+        <div class="col-md-12">
           <div class="game-stat">
             <h3>Games played</h3>
             <%= content_tag "div", id: "games-played", data: @data.count_games_played_for_all_games do %>
@@ -63,26 +63,19 @@
       </div>
 
       <% @game_types.each do |game_type| %>
-
       <div class="row" style="text-align:center;">
-
-        <div class="col-md-4">
+        <div class="col-md-12">
           <div class="game-stat <%= game_type.name.downcase.tr(' ', '-') %>-charts">
             <h3>Win %</h3>
             <%= content_tag "div", id: "win-percentage", data: @data.win_percentages_for_chart(game_type) do %>
               <canvas height="250" width="250"></canvas>
             <% end %>
           </div>
-        </div>
-
-        <div class="col-md-4">
           <div class="game-stat">
-            <h3>Position</h3>
-            <canvas id="league-position" height="250" width="250"></canvas>
+            <h2><%= format_league_position(current_player.league_position_for(game_type)) %></h2>
           </div>
         </div>
       </div>
-
       <% end %>
 
   </div>

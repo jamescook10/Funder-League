@@ -7,4 +7,16 @@ module ApplicationHelper
     when :alert then "alert alert-danger"
     end
   end
+
+  def css_case(string)
+    string.downcase.tr(' ', '-')
+  end
+
+  def underscore_case(string)
+    string.downcase.tr(' ', '_')
+  end
+
+  def percentage_format(value)
+    sprintf("%#.2f", value) + "%"
+  end
 end

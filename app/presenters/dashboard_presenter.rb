@@ -1,4 +1,5 @@
 require './app/helpers/application_helper'
+include ApplicationHelper
 
 class DashboardPresenter
 
@@ -10,7 +11,7 @@ class DashboardPresenter
   def count_games_played_for_all_games
     games_played = {games_played: {} }
     @game_types.each do |game_type|
-      game_type_name = game_type.name.downcase.tr(' ', '_').to_sym
+      game_type_name = underscore_case(game_type.name).to_sym
       games_played[:games_played][game_type_name] = { value: @current_player.count_games_for(game_type), color: game_type.color }
     end
     return games_played
