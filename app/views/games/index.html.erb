@@ -7,32 +7,30 @@
     <h1>My Games</h1>
     <div class="row">
 
-  <% @game_groups.each_pair do |game_type, games| %>
-    <% games.each do |game| %>
-      <div class="result <%= game_type.name.downcase.split.join('-') %>">
-        <div class="cont" style="text-align:center;">
-          <div><h2><%= game_type.name %></h2></div>
-          <div style="width:300px; margin:auto; text-align:center;">
+  <% @games.each do |game| %>
+    <div class="result <%= css_case(game.game_type.name) %>">
+      <div class="cont" style="text-align:center;">
+        <div><h2><%= game.game_type.name %></h2></div>
+        <div style="width:300px; margin:auto; text-align:center;">
 
-            <div class="result-box">
-              <h3><%= game.scores_for(current_player).first.value %></h3>
-              <h4><%= Player.find(game.scores_for(current_player).first.player_id).full_name %></h4>
-            </div>
-
-            <div class="vs" style="float:left;height:100px;">
-              <h3>VS</h3>
-            </div>
-
-            <div class="result-box">
-              <h3><%= game.scores_for(current_player).last.value %></h3>
-              <h4><%= Player.find(game.scores_for(current_player).last.player_id).full_name %></h4>
-            </div>
-
+          <div class="result-box">
+            <h3><%= game.scores_for(current_player).first.value %></h3>
+            <h4><%= Player.find(game.scores_for(current_player).first.player_id).full_name %></h4>
           </div>
-          <div class="clearfix"></div>
+
+          <div class="vs" style="float:left;height:100px;">
+            <h3>VS</h3>
+          </div>
+
+          <div class="result-box">
+            <h3><%= game.scores_for(current_player).last.value %></h3>
+            <h4><%= Player.find(game.scores_for(current_player).last.player_id).full_name %></h4>
+          </div>
+
         </div>
+        <div class="clearfix"></div>
       </div>
-    <% end %>
+    </div>
   <% end %>
 
 </div>
