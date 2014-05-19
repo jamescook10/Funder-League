@@ -8,7 +8,7 @@
 
       <div class="row">
         <div class="col-md-12">
-          <div class="game">
+          <div class="game new">
             <h3>Add a result!</h3>
 
             <%= form_for @game, html: { role: "form" } do |f| %>
@@ -28,8 +28,7 @@
 
             <div class="result">
               <div style="text-align:center;">
-                <div style="width:315px; margin:auto;"><%= f.collection_select :game_type_id, GameType.all, :id, :name, { prompt: "Select Game" }, { class: "form-control" } %></div>
-
+                <div id="game-select"><%= f.collection_select :game_type_id, GameType.all, :id, :name, { prompt: "Select Game" }, { class: "form-control" } %></div>
 
 
                 <div style="width:300px; margin:auto; text-align:center;">
@@ -37,27 +36,24 @@
                   <div class="result-box">
 
 
-                    <%= f.label :player_score, "Your Score" %>
-                    <%= f.text_field :player_score, { placeholder: "Please enter your score", class: "form-control" } %>
+                    <%= f.label :player_score, "Enter Your Score" %>
+                    <%= f.text_field :player_score, { class: "form-control" } %>
 
                     <h4><%= current_player.possessive_form(current_player.full_name) %></h4>
                   </div>
 
                   <div class="vs" style="float:left;height:100px;">
-                    <h3>VS</h3>
+                    <h3 style="background:none">VS</h3>
                   </div>
 
                   <div class="result-box">
 
-                    <%= f.label :opponent_score, "Opponent's Score" %>
-                    <%= f.text_field :opponent_score, { placeholder: "Please enter your opponent's score", class: "form-control" } %>
+                    <%= f.label :opponent_score, "Enter Their Score" %>
+                    <%= f.text_field :opponent_score, { class: "form-control" } %>
 
-                    <h4>
+                      
+                      <%= f.collection_select :opponent_id, @data.list_opponents, :id, :full_name, { prompt: "Select Opponent" }, { class: "form-control" } %>
 
-                      <%# f.label :opponent_id, "Select Your Opponent" %>
-                      <%= f.collection_select :opponent_id, @data.list_opponents, :id, :full_name, { prompt: "Select opponent" }, { class: "form-control" } %>
-
-                    </h4>
                   </div>
                   
                 </div>
@@ -118,17 +114,18 @@
             </div>
 
             <div class="col-md-4" style="text-align:left;">
-              <h4>Win %</h4>
+              <h2>Win % </h2>
               <hr>
+              <%= percentage_format(current_player.win_percentage_for(game_type)) %>
               <%= content_tag "div", id: "win-percentage", data: @data.win_percentages_for_chart(game_type) do %>
               <canvas height="250" width="250"></canvas>
               <% end %>
             </div>
 
             <div class="col-md-4" style="text-align:left;">
-              <h4>Position</h4>
+              <h2>Position In The League</h2>
               <hr>
-              <h2><%= format_league_position(current_player.league_position_for(game_type)) %></h2>
+              <h4><%= format_league_position(current_player.league_position_for(game_type)) %></h3>
             </div>
 
 
