@@ -10,7 +10,15 @@
       <% @games.each do |game| %>
         <div class="result <%= css_case(game.game_type.name) %>">
           <div class="cont" style="text-align:center;">
-            <div><h2><%= game.game_type.name %></h2></div>
+            <header><h2><%= game.game_type.name %></h2> 
+            <%= link_to edit_game_path(game), class:"delete-result" do %>
+              <span class="glyphicon glyphicon-trash"></span> Delete
+            <% end %>
+            <%= link_to edit_game_path(game), class:"edit-result" do %>
+              <span class="glyphicon glyphicon-edit"></span> Edit
+            <% end %>
+            </header>
+
             <div style="width:300px; margin:auto; text-align:center;">
               <div class="result-box">
                 <h3><%= game.scores_for(current_player).first.value %></h3>

@@ -41,7 +41,7 @@ feature 'Games' do
     ensure_on my_games_path
     expect(page).to have_content "My Games"
 
-    click_link("Edit Result")
+    click_link("Edit")
 
     fill_in :game_player_score, with: 3
     fill_in :game_opponent_score, with: 0
