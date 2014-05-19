@@ -1,16 +1,16 @@
 <%= render 'layouts/nav' %>
 <div class="container-fluid menu-padding">
 
-<%= render 'dashboard/side_menu' %>
+  <%= render 'dashboard/side_menu' %>
 
   <div class="col-sm-11">
     <h1>My Games</h1>
     <div class="row">
 
-  <% @game_groups.each_pair do |game_type, games| %>
-    <% games.each do |game| %>
+      <% @game_groups.each_pair do |game_type, games| %>
+      <% games.each do |game| %>
       <div class="result <%= game_type.name.downcase.split.join('-') %>">
-        <div class="cont" style="text-align:center;">
+        <div style="text-align:center;">
           <div><h2><%= game_type.name %></h2></div>
           <div style="width:300px; margin:auto; text-align:center;">
 
@@ -32,9 +32,9 @@
           <div class="clearfix"></div>
         </div>
       </div>
-    <% end %>
-  <% end %>
+      <% end %>
+      <% end %>
 
-</div>
-</div>
+    </div>
+  </div>
 </div>

@@ -89,7 +89,7 @@ var games_played = function(status) {
       console.log(game_type + " Win % Chart: On");
 
       // Grab data from Rails
-      percentage = $(".game-stat." + game_type + "-charts" + " #win-percentage").data('percentages');
+      percentage = $(".game." + game_type + "-charts" + " #win-percentage").data('percentages');
 
       // Convert Games Played data from object to array for use in chart
       var win_percentage_data = $.map(percentage, function(value, index) {
@@ -98,7 +98,7 @@ var games_played = function(status) {
 
 
       // Set the canvas for the chart
-      var ctx = $(".game-stat." + game_type + "-charts" + " #win-percentage canvas").get(0).getContext("2d");
+      var ctx = $(".game." + game_type + "-charts" + " #win-percentage canvas").get(0).getContext("2d");
 
       // Create new chart object
       var chart = new Chart(ctx);

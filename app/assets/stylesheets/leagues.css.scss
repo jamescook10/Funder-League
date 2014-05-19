@@ -6,10 +6,48 @@
 @import "variables";
 
 .league {
-  background: $green;
-  box-shadow: 0 5px 0 0 rgba(161,196,148, 0.7);
   border-radius: 5px;
   margin: 20px 10px 50px;
+  &.fifa {
+    background: $green;
+    box-shadow: 0 5px 0 0 rgba(161,196,148, 0.7);
+    table tr th div {
+      background: $dark-green;
+    }
+    table tr:nth-child(2n+3) {
+      background: $dark-green;
+    }
+  }
+  &.pool {
+    background: $blue;
+    box-shadow: 0 5px 0 0 rgba(147,160,196, 0.7);
+    table tr th div {
+      background: $dark-blue;
+    }
+    table tr:nth-child(2n+3) {
+      background: $dark-blue;
+    }
+  }
+  &.table-tennis {
+    background: $red;
+    box-shadow: 0 5px 0 0 rgba(196,147,160, 0.7);
+    table tr th div {
+      background: $dark-red;
+    }
+    table tr:nth-child(2n+3) {
+      background: $dark-red;
+    }
+  }
+  &.table-football {
+    background: $purple;
+    box-shadow: 0 5px 0 0 rgba(184,149,196, 0.7);
+    table tr th div  {
+      background: $dark-purple;
+    }
+    table tr:nth-child(2n+3) {
+      background: $dark-purple;
+    }
+  }
   table {
     width: 100%;
     margin: 20px 0px;
@@ -20,15 +58,9 @@
     }
     tr th div {
       border-radius: 5px;
-      background: $dark-green;
       margin: 10px 15px;
       text-align: center;
       font-size: 1.4em;
-    }
-    tr {
-      &:nth-child(2n+3) {
-        background: $dark-green;
-      }
     }
     tr td div {
       border-radius: 5px;
@@ -61,7 +93,6 @@
   background: rgba(167, 123, 182, 0.4);
   height: 100%;
 }
-
 
   #fifa{
     background: url(backgrounds/break_out.jpg) 0% 0 no-repeat fixed;

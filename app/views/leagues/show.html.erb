@@ -11,7 +11,7 @@
       <div class="col-sm-11"> 
 
         <h1><%= @game_type.name %></h1>
-        <div class="league">
+        <div class="league <%= @game_type.name.downcase.split.join('-') %>">
           <table>
             <tr>
               <th><div class="pos"></div></th>
