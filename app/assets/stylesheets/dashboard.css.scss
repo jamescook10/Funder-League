@@ -4,110 +4,70 @@
 
 @import "variables";
 
-form {
-  &>input {
-    border-radius: 5px;
-    margin: 5px 0px;
-  }
-}
-
 .side-menu {
-  background: $dark-purple;
   text-align: center;
 }
 
-.new-result {
-  background: $green;
-  border-radius: 5px;
-  box-shadow: 0 4px 0 0 rgba(161,196,148, 0.4);
-  padding: 10px;
-  // margin: 10px;
+.colorbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  display: block;
+  float:left; 
 }
 
-.game-stats-panel {
-  color: $extra-dark-grey;
-  background: $grey;
-  border-radius: 5px;
-  box-shadow: 0 5px 0 0 rgba(0,0,0, 0.2);
-
-  h2 {
-    font-size: 1em;
-  }
-}
-
-.game-stat {
-  background: $grey;
+.game {
+  background: rgba(56, 64, 71, 0.6);
+  box-shadow: 0 4px 0 0 rgba(167, 123, 182, 0.7);
   border-radius: 5px;
   overflow: hidden;
   margin: 10px;
-  
-
+  hr { border:1px solid $white; width: 50%}
   h3 {
-    background: $dark-purple;
-    margin: 0;
-    padding: 10px 0 10px 0;
-  }
-
-  .chart {
-    padding: 2px 10px 10px 10px;
-  }
-
-  &.fifa {
-    background: $green;
-  }
-  &.pool {
-    background: $blue;
-  }
-  &.table-tennis {
-    background: $red;
-  }
-  &.table-football {
     background: $purple;
+    margin: 0;
+    padding: 10px 0 10px 30px;
   }
-  div {
-    font-size: 600%;
-  }
-}
-
-.cont {
-  // width: 660px;
-  margin: auto;
-  h2 {
-    margin-top: 0px;
-    margin-bottom: 14px;
-    font-size: 1.3em;
-    padding: 3px 0 5px 0;
-    // border-radius: 10px;
+  ul {
+    list-style: none;
+    h5 {
+      margin-left: 35px;
+    }
   }
 }
-
 
 .result {
   border-radius: 5px;
-  // padding: 1px;
   overflow: hidden;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 20px; 
-
+  input {
+    border-radius: 5px;
+    background: $white;
+    box-shadow: 0 5px 0 0 darken($white, 20%);
+  }
+  h2 {
+    margin-top: 0px;
+  }
   &.fifa {
     background: $green;
     box-shadow: 0 5px 0 0 darken($green, 20%);
-    .cont h2 {
+    h2 {
       background: $dark-green;
     }
   }
   &.pool {
     background: $blue;
     box-shadow: 0 5px 0 0 rgba(147,160,196, 0.7);
-    .cont h2 {
+    h2 {
       background: $dark-blue;
     }
   }
   &.table-tennis {
     background: $red;
     box-shadow: 0 5px 0 0 rgba(196,147,160, 0.7);
-    .cont h2 {
+    h2 {
       background: $dark-red;
     }
   }
@@ -152,10 +112,10 @@ form {
 .col-sm-1.side-menu {
   padding-left: 0px;
   padding-right: 0px;
-  height: 1600px;
+  height: 1000px;
   h3 a {
     font-size:24px;
-    }
+  }
   a {
     font-size:50px;
     margin-top:20px;

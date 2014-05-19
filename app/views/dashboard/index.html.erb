@@ -5,89 +5,146 @@
 
   <div class="col-sm-11">
     <h1><%= current_player.possessive_form(current_player.first_name) %> Dashboard</h1>
-    <div class="new-result">
 
+      <div class="row">
+        <div class="col-md-12">
+          <div class="game">
+            <h3>Add a result!</h3>
 
-      <%= form_for @game, html: { role: "form" } do |f| %>
+            <%= form_for @game, html: { role: "form" } do |f| %>
+            <% if @game.errors.any? %>
+            <div id="error_explanation" class="alert alert-danger">
+              <h2>Oops! You've got <%= pluralize(@game.errors.count, "error") %> there player...</h2>
 
-      <% if @game.errors.any? %>
-      <div id="error_explanation" class="alert alert-danger">
-        <h2>Oops! You've got <%= pluralize(@game.errors.count, "error") %> there player...</h2>
-
-        <ul>
-          <% @game.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-      <% end %>
-
-      <div class="form-group">
-        <%= f.label :opponent, "Select Game" %>
-        <%= f.collection_select :game_type_id, GameType.all, :id, :name, { prompt: "Select Game" }, { class: "form-control" } %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :opponent_id, "Select Your Opponent" %>
-        <%= f.collection_select :opponent_id, @data.list_opponents, :id, :full_name, { prompt: "Select opponent" }, { class: "form-control" } %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :player_score, "Your Score" %>
-        <%= f.text_field :player_score, { placeholder: "Please enter your score", class: "form-control" } %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :opponent_score, "Opponent's Score" %>
-        <%= f.text_field :opponent_score, { placeholder: "Please enter your opponent's score", class: "form-control" } %>
-      </div>
-
-      <%= f.submit "Add Result" %>
-
-      <% end %>
-    </div> 
-
-      <h2>Your Game Stats:</h2>
-      
-      <div class="row" style="text-align:center;">
-
-        <div class="col-md-4">
-          <div class="game-stat">
-            <h3>Games played</h3>
-            <%= content_tag "div", id: "games-played", data: @data.count_wins_for_all_games do %>
-              <canvas height="250" width="250"></canvas>
+              <ul>
+                <% @game.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
             <% end %>
+
+
+
+            <div class="result">
+              <div style="text-align:center;">
+                <div style="width:315px; margin:auto;"><%= f.collection_select :game_type_id, GameType.all, :id, :name, { prompt: "Select Game" }, { class: "form-control" } %></div>
+
+
+
+                <div style="width:300px; margin:auto; text-align:center;">
+
+                  <div class="result-box">
+
+
+                    <%= f.label :player_score, "Your Score" %>
+                    <%= f.text_field :player_score, { placeholder: "Please enter your score", class: "form-control" } %>
+
+
+                    <h4><%= current_player.possessive_form(current_player.full_name) %></h4>
+                  </div>
+
+                  <div class="vs" style="float:left;height:100px;">
+                    <h3>VS</h3>
+                  </div>
+
+                  <div class="result-box">
+
+                    <%= f.label :opponent_score, "Opponent's Score" %>
+                    <%= f.text_field :opponent_score, { placeholder: "Please enter your opponent's score", class: "form-control" } %>
+
+                    <h4>
+
+                      <%# f.label :opponent_id, "Select Your Opponent" %>
+                      <%= f.collection_select :opponent_id, @data.list_opponents, :id, :full_name, { prompt: "Select opponent" }, { class: "form-control" } %>
+
+                    </h4>
+                  </div>
+                  
+                </div>
+                <div class="clearfix"></div>
+              </div>
+<%= f.submit "Add Result" %>
+
+                  <% end %>
+            </div>
+            
           </div>
         </div>
+      </div> <!-- row -->
 
+
+    <h2>Your Game Stats:</h2>
+
+    <div class="row" style="text-align:left;">
+
+      <div class="col-md-12">
+        <div class="game">
+          <h3>Games played</h3>
+          <div class="row">
+
+            <div class="col-md-6" style="text-align:center;">
+              <%= content_tag "div", id: "games-played", data: @data.count_wins_for_all_games do %>
+              <canvas height="300" width="300"></canvas>
+              <% end %>
+            </div>
+
+            <div class="col-md-6" style="text-align:left;">
+              <h4>Legend</h4>
+              <hr>
+              <ul>
+                <% @game_types.each do |game_type| %> 
+                <li><span class="colorbox" style="background:<%= game_type.color %>;"></span><h5><%= game_type.name%></h5></li>  
+                <% end %>
+              </ul>
+            </div>
+
+          </div>
+        </div>
       </div>
 
-      <% @game_types.each do |game_type| %>
+    </div>
 
-      <div class="row" style="text-align:center;">
+    <% @game_types.each do |game_type| %>
 
-        <div class="col-md-4">
-          <div class="game-stat <%= game_type.name.downcase.tr(' ', '-') %>-charts">
-            <h3>Win %</h3>
-            <%= content_tag "div", id: "win-percentage", data: @data.win_percentages_for_chart(game_type) do %>
+    <div class="row" style="text-align:left;">
+
+      <div class="col-md-12">
+        <div class="game <%= game_type.name.downcase.tr(' ', '-') %>-charts">
+          <h3><%= game_type.name %></h3>
+
+          <div class="row">
+
+            <div class="col-md-4" >
+            </div>
+
+            <div class="col-md-4" style="text-align:left;">
+              <h4>Win %</h4>
+              <hr>
+              <%= content_tag "div", id: "win-percentage", data: @data.win_percentages_for_chart(game_type) do %>
               <canvas height="250" width="250"></canvas>
-            <% end %>
-          </div>
-        </div>
+              <% end %>
+            </div>
 
-        <div class="col-md-4">
-          <div class="game-stat">
-            <h3>Position</h3>
-            <canvas id="league-position" height="250" width="250"></canvas>
+            <div class="col-md-4" style="text-align:left;">
+              <h4>Position</h4>
+              <hr>
+              <canvas id="league-position" height="250" width="250"></canvas>
+            </div>
+
           </div>
+
         </div>
       </div>
 
-      <% end %>
+    </div>
+
+    <% end %>
 
   </div>
 
 </div>
+
 
 
 
