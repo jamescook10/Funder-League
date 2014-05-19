@@ -6,4 +6,10 @@ class GameType < ActiveRecord::Base
     name
   end
 
+  def sort_players_by_win_percentage
+    self.players.sort do |a,b|
+      b.win_percentage_for(self) <=> a.win_percentage_for(self)
+    end
+  end
+
 end
