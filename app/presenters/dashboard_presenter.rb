@@ -37,8 +37,6 @@ class DashboardPresenter
     opponents - [@current_player]
   end
 
-  private
-
   def darken_color(hex_color, amount=0.4)
     hex_color = hex_color.gsub('#','')
     rgb = hex_color.scan(/../).map {|color| color.hex}
