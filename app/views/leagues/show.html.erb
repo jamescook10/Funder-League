@@ -29,7 +29,7 @@
           <% @sorted_players.each_with_index do |player, index| %>
           <tr>
             <td><div class="pos"><%= index + 1 %></div></td>
-            <td><div class="player_name"><img src="<%= player.gravatar_image %>" id="avatar" /><span><%= player.full_name %></span></div></td>
+            <td><div class="player_name"><img src="<%= player.gravatar_image %>" class="avatar" /><span><%= player.full_name %></span></div></td>
             <td><div><%= player.count_games_for(@game_type) %></div></td> 
             <td><div><%= player.count_wins_for(@game_type) %></div></td>
             <td><div><%= player.count_draws_for(@game_type) %></div></td>
