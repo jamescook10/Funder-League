@@ -1,9 +1,16 @@
 <div class="col-sm-1 side-menu"> 
-  
+
   <a href="/"><%= image_tag("funderleague_logo_square.png", :alt => "logo", :id => "logo-sm") %></a>
   
-  <%= link_to "" , dashboard_path, class: "fa fa-tachometer"%>
-  <%= link_to "" , my_games_path, class: "fa fa-user", id: "my-games"%>
+  <%= link_to dashboard_path, class: "fa fa-tachometer" do %>
+    <span class="not-mobile">Dashboard</span>
+  <% end %>
+
+  <%= link_to my_games_path, class: "fa fa-user", id: "my-games" do %>
+    <span class="not-mobile">Games</span>
+  <% end %>
+
   <%= link_to "" , my_games_path, class: "fa fa-cogs" %>
+
 
 </div>
