@@ -10,7 +10,9 @@
     <span class="not-mobile">Games</span>
   <% end %>
 
-  <%= link_to "" , my_games_path, class: "fa fa-cogs" %>
+  <%= link_to edit_player_registration_path, class: "fa fa-cogs" do %>
+    <span class="not-mobile">Settings</span>
+  <% end %>
 
 
 </div>
