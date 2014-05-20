@@ -29,8 +29,8 @@ feature 'Games' do
 
     expect(page).to have_content "My Games"
     expect(page).to have_content game_type.name
-    expect(page).to have_content "1 #{player.full_name.capitalize} VS 2 #{opponent.full_name.capitalize}"
-    expect(page).to have_content "3 #{player.full_name.capitalize} VS 1 #{opponent.full_name.capitalize}"
+    expect(page).to have_content "1 #{player.full_name} VS 2 #{opponent.full_name}"
+    expect(page).to have_content "3 #{player.full_name} VS 1 #{opponent.full_name}"
   end
 
   scenario "edit game result from the 'My Games' page" do
@@ -49,7 +49,7 @@ feature 'Games' do
     click_button "Save Result"
 
     expect(page).to have_content "Game result successfully updated"
-    expect(page).to have_content "3 #{player.full_name.capitalize} VS 0 #{opponent.full_name.capitalize}"
+    expect(page).to have_content "3 #{player.full_name} VS 0 #{opponent.full_name}"
   end
 
   scenario 'delete a game result' do

@@ -22,14 +22,14 @@
             <div style="width:300px; margin:auto; text-align:center;">
               <div class="result-box">
                 <h3><%= game.scores_for(current_player).first.value %></h3>
-                <h4><%= Player.find(game.scores_for(current_player).first.player_id).full_name.capitalize %></h4>
+                <h4><%= Player.find(game.scores_for(current_player).first.player_id).full_name %></h4>
               </div>
               <div class="vs" style="float:left;height:100px;">
                 <h3>VS</h3>
               </div>
               <div class="result-box">
                 <h3><%= game.scores_for(current_player).last.value %></h3>
-                <h4><%= Player.find(game.scores_for(current_player).last.player_id).full_name.capitalize %></h4>
+                <h4><%= Player.find(game.scores_for(current_player).last.player_id).full_name %></h4>
               </div>
             </div>
             <div class="clearfix"></div>
