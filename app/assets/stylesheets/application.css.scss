@@ -53,8 +53,8 @@ form div input {
   margin: 30px 0px;
   max-width: 100%;
 }
-#error_explanation {
-  z-index: 20;
+#error_explanation.alert {
+  margin: 10px;
   h3 {
     margin-top: 0px;
   }

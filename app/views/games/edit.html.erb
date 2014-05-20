@@ -4,6 +4,7 @@
   <%= render 'dashboard/side_menu' %>
 
   <div class="col-sm-11">
+  
     <h1><%= current_player.possessive_form(current_player.first_name) %> Dashboard</h1>
 
     <div class="row">
@@ -12,17 +13,6 @@
           <h3>Edit Result</h3>
 
           <%= form_for @game, html: { role: "form" } do |f| %>
-
-          <% if @game.errors.any? %>
-          <div id="error_explanation" class="alert alert-danger">
-            <h2>Oops! You've got <%= pluralize(@game.errors.count, "error") %> there player...</h2>
-            <ul>
-              <% @game.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-              <% end %>
-            </ul>
-          </div>
-          <% end %>
 
           <div class="result">
             <div style="text-align:center;">

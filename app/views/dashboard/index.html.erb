@@ -2,32 +2,35 @@
 <div class="container-fluid menu-padding">
 
   <%= render 'dashboard/side_menu' %>
-<%= form_for @game, html: { role: "form" } do |f| %>
-            <% if @game.errors.any? %>
-            
-            <div id="error_explanation" class="alert alert-danger">
-              <h3>Oops! You've got <%= pluralize(@game.errors.count, "error") %> there player...</h3>
 
-              <ul>
-                <% @game.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-                <% end %>
-              </ul>
-            </div>
-            
+
+<% if @game.errors.any? %>
+  <div class="col-sm-11">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="error_explanation" class="alert alert-danger">
+          <h3>Oops! You've got <%= pluralize(@game.errors.count, "error") %> there player...</h3>
+          <ul>
+            <% @game.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
             <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
   <div class="col-sm-11">
     <h1><img src="<%= current_player.gravatar_image %>" id="profile_image" /><%= current_player.possessive_form(current_player.first_name) %> Dashboard</h1>
 
-      
-
-
-<div class="row">
+      <div class="row">
         <div class="col-md-12">
           <div class="game new">
             <h3>Add a result!</h3>
 
 
+            <%= form_for @game, html: { role: "form" } do |f| %>
             <div class="result">
               <div style="text-align:center;">
                 <div id="game-select"><%= f.collection_select :game_type_id, @game_types, :id, :name, { prompt: "Select Game" }, { class: "form-control" } %></div>
