@@ -2,6 +2,7 @@
 <%= render 'layouts/nav' %>
 <div class="hero-wrap">
   <div class="container menu-padding">
+  <%= render 'layouts/flash_message' %>
     <h2>Sign up</h2>
 
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
