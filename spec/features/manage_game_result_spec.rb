@@ -48,8 +48,8 @@ feature 'Games' do
 
     click_button "Save Result"
 
-    expect(page).to have_content "Game successfully updated"
-    expect(page).to have_content "#{player.full_name} 3 - 0 #{opponent.full_name}"
+    expect(page).to have_content "Game result successfully updated"
+    expect(page).to have_content "3 #{player.full_name} VS 0 #{opponent.full_name}"
   end
 
 end
