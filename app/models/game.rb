@@ -9,6 +9,7 @@ class Game < ActiveRecord::Base
 
   before_save :calculate_winner
   before_create :create_scores
+  before_update :update_scores
 
   validates :game_type_id, presence: true
   validates :player_id, presence: true
@@ -53,6 +54,16 @@ class Game < ActiveRecord::Base
   def create_scores
     self.scores.build(value: @player_score, player_id: @player_id)
     self.scores.build(value: @opponent_score, player_id: @opponent_id)
+  end
+
+  def update_scores
+    player_score = self.scores.where(player_id: @player_id).first
+    opponent_score = self.scores.where.not(player_id: @player_id).first
+    player_score.value = @player_score
+    player_score.save
+    opponent_score.value = @opponent_score
+    opponent_score.player_id = @opponent_id
+    opponent_score.save
   end
 
   def scores_for(player)

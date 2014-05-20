@@ -46,7 +46,7 @@ feature 'Games' do
     fill_in :game_player_score, with: 3
     fill_in :game_opponent_score, with: 0
 
-    click_button "Save Game"
+    click_button "Save Result"
 
     expect(page).to have_content "Game successfully updated"
     expect(page).to have_content "#{player.full_name} 3 - 0 #{opponent.full_name}"

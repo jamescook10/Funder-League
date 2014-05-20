@@ -79,6 +79,28 @@ describe GamesController do
         expect(response).to redirect_to new_player_session_path
       end
     end
-    
+  end
+
+  describe 'PUT #update' do
+
+    let!(:game) { create(:game, player_id: player.id, opponent_id: opponent.id) }
+    let!(:other_player) { create(:player) }
+
+    context 'when a player is updating their own game' do
+      it 'updates a game' do
+        sign_in player
+        put :update, { game: { game_type_id: fifa.id, player_score: 3, opponent_score: 1, player_id: player.id, opponent_id: opponent.id }, id: game.id }
+        expect(response).to redirect_to my_games_path
+      end
+    end
+
+    context 'when a player attempts to update a game they haven\'t played' do
+
+      it 'renders the edit form' do
+        sign_in other_player
+        put :update, { game: { game_type_id: fifa.id, player_score: 3, opponent_score: 1, player_id: player.id, opponent_id: opponent.id }, id: game.id }
+        expect(response).to redirect_to my_games_path
+      end
+    end
   end
 end

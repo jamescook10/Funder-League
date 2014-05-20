@@ -1,9 +1,9 @@
 class GamesController < ApplicationController
-
+  
   before_action :authenticate_player!
 
   def index
-    @games = current_player.games.includes(:game_type)
+    @games = current_player.games.includes(:game_type).order(created_at: :desc)
   end
 
   def create
@@ -29,6 +29,24 @@ class GamesController < ApplicationController
   rescue ActiveRecord::RecordNotFound => e
     redirect_to my_games_path
     flash[:alert] = "Access denied sucker! You did not play this game!"
+  end
+
+  def update
+    @data = DashboardPresenter.new(current_player)
+    @game_types = GameType.all
+    begin
+      @game = current_player.games.find(params[:id])
+      @game.player_id = current_player.id
+      if @game.update_attributes(game_params)
+        redirect_to my_games_path
+        flash[:success] = "Game result successfully updated"
+      else
+        render "games/edit"
+      end
+    rescue ActiveRecord::RecordNotFound => e
+      redirect_to my_games_path
+      flash[:alert] = "Access denied sucker! You did not play this game!"
+    end
   end
 
   private
