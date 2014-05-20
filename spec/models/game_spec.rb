@@ -149,6 +149,15 @@ describe Game do
     end
   end
 
-  
+  describe 'deleting scores' do
+    let!(:game) { create(:game) }
+    let(:score1) { game.scores.first }
+    let(:score2) { game.scores.last }
 
+    it 'destroys associated scores when game is deleted' do
+      game.destroy
+      expect(score1).to be nil
+      expect(score2).to be nil
+    end
+  end
 end

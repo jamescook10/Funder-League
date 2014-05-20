@@ -29,8 +29,8 @@ feature 'Games' do
 
     expect(page).to have_content "My Games"
     expect(page).to have_content game_type.name
-    expect(page).to have_content "1 #{player.full_name} VS 2 #{opponent.full_name}"
-    expect(page).to have_content "3 #{player.full_name} VS 1 #{opponent.full_name}"
+    expect(page).to have_content "1 #{player.full_name.capitalize} VS 2 #{opponent.full_name.capitalize}"
+    expect(page).to have_content "3 #{player.full_name.capitalize} VS 1 #{opponent.full_name.capitalize}"
   end
 
   scenario "edit game result from the 'My Games' page" do
@@ -49,7 +49,21 @@ feature 'Games' do
     click_button "Save Result"
 
     expect(page).to have_content "Game result successfully updated"
-    expect(page).to have_content "3 #{player.full_name} VS 0 #{opponent.full_name}"
+    expect(page).to have_content "3 #{player.full_name.capitalize} VS 0 #{opponent.full_name.capitalize}"
+  end
+
+  scenario 'delete a game result' do
+    ensure_on dashboard_path
+
+    create_game({ game_type: game_type.name, opponent: opponent.full_name, player_score: 3, opponent_score: 2 })
+
+    ensure_on my_games_path
+    expect(page).to have_content "My Games"
+
+    click_link("Delete")
+
+    expect(page).to have_content "Game result deleted"
+    expect(page).to_not have_content "3 #{player.full_name} VS 2 #{opponent.full_name}"
   end
 
 end

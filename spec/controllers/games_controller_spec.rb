@@ -103,4 +103,13 @@ describe GamesController do
       end
     end
   end
+
+  describe 'DELETE #destroy' do
+    let!(:game) { create(:game, player_id: player.id, opponent_id: opponent.id) }
+    it 'deletes a game' do
+      sign_in player
+      delete :destroy, { id: game.id }
+      expect(response).to redirect_to my_games_path
+    end
+  end
 end

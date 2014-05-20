@@ -3,7 +3,7 @@ class Game < ActiveRecord::Base
   attr_writer :player_score, :opponent_score, :opponent_id
 
   belongs_to :game_type
-  has_many :scores
+  has_many :scores, dependent: :destroy
   has_many :players, through: :scores
   belongs_to :winner, class_name: "Player"
 
