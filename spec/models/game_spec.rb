@@ -18,6 +18,11 @@ describe Game do
         subject.player_score = nil
         expect(subject).to_not be_valid
       end
+
+      it 'must be a number' do
+        subject.player_score = "string"
+        expect(subject).to_not be_valid
+      end
     end
 
     describe "player_id" do
@@ -30,6 +35,11 @@ describe Game do
     describe "opponent_score" do
       it 'must be present' do
         subject.opponent_score = nil
+        expect(subject).to_not be_valid
+      end
+
+      it 'must be a number' do
+        subject.opponent_score = "string"
         expect(subject).to_not be_valid
       end
     end

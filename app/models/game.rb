@@ -13,9 +13,9 @@ class Game < ActiveRecord::Base
 
   validates :game_type_id, presence: true
   validates :player_id, presence: true
-  validates :player_score, presence: true
+  validates :player_score, presence: true, numericality: true
   validates :opponent_id, presence: true
-  validates :opponent_score, presence: true
+  validates :opponent_score, presence: true, numericality: true
 
   def player_score
     if self.new_record?
