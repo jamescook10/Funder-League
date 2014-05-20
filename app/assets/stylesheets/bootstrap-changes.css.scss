@@ -91,6 +91,19 @@ a {
 
 @media only screen and (max-width: 767px) {
  .navbar-collapse {
-  background: rgb(56,64,71);
-}
+    background: rgb(56,64,71);
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: $white;
+  }
+
+
+
+
+
+
+
+
+
+
 }
