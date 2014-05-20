@@ -1,3 +1,5 @@
+require 'digest/md5'
+
 module DashboardHelper
   def format_league_position(position)
     position = position.to_s unless position.nil?
@@ -13,4 +15,5 @@ module DashboardHelper
       position + "rd"
     end
   end
+
 end
