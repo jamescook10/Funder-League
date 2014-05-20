@@ -4,7 +4,7 @@
   <%= render 'dashboard/side_menu' %>
 
   <div class="col-sm-11">
-    <h1><%= current_player.possessive_form(current_player.first_name) %> Dashboard</h1>
+    <h1><img src="<%= current_player.gravatar_image %>" id="profile_image" /><%= current_player.possessive_form(current_player.first_name) %> Dashboard</h1>
 
       <div class="row">
         <div class="col-md-12">

@@ -18,6 +18,13 @@ class Player < ActiveRecord::Base
     end
   end
 
+  def gravatar_image
+    email_address = self.email.downcase
+    hash = Digest::MD5.hexdigest(email_address)
+    image_src = "http://www.gravatar.com/avatar/#{hash}"
+    image_src
+  end
+
   def possessive_form(name)
     if name[-1] == "s"
       name + "'"

@@ -1,69 +1,68 @@
  @import "variables";
 
  .container, .container-fluid {
- color: $white;
+   color: $white;
  }
 
- body{
+ body {
   background-color: $bg-grey;
-  }
+}
 
- h1 {font-size: 2.5em}
- h2 {font-size: 1.75em}
- h3 {font-size: 1.5em}
- h4 {font-size: 1.25em}
- h5 {font-size: 1.1em}
+h1 {font-size: 2.5em}
+h2 {font-size: 1.75em}
+h3 {font-size: 1.5em}
+h4 {font-size: 1.25em}
+h5 {font-size: 1.1em}
 
- .navbar-default {
+.navbar-default {
   background: rgba(56,64,71, 0.6);
   border-color: rgba(56,64,71, 0.6);
- }
+}
 
- .navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav>li>a {
   color: $white;
   font-size: 16px;
   font-weight: 400;
- } 
+} 
 
- .navbar-brand {
+.navbar-brand {
   padding: 5px;
- }
+}
 
- .navbar {
+.navbar {
   border-radius: 0px;
   margin-bottom: 0px;
   height: 60px;
- }
+}
 
- h3 {
+h3 {
  margin-top:10px;
- }
+}
 
- .dropdown-menu {
+.dropdown-menu {
   background: $grey;
   border: 1.5px solid $purple;
   border-radius: 5px;
   li>a { 
     color: $purple;
   }
- }
-
- hr {
-  margin: 10px 0px;
-  border-top: 1px solid #555;
- }
-
- input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
-  border: none;
- }
-
- .new_player div {
-  &>input {
-  border-radius: 5px;
-  margin: 5px 0px;
-  }
 }
 
+hr {
+  margin: 10px 0px;
+  border-top: 1px solid #555;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
+  border: none;
+}
+
+.new_player div {
+  &>input {
+    border-radius: 5px;
+    margin: 5px 0px;
+  }
+}
 a {
   color: $white;
   &:hover, &:focus  {
@@ -72,17 +71,12 @@ a {
   }
 }
 
-
-
- .alert, .notice {
-  margin: 0px;
+.alert, .notice, {
+  position: absolute;
+  right: 19%;
+  top: 60px;
+  width: 260px;
 }
-
-  .alert, .notice, {
-    top: 60px;
-    position: absolute;
-  }
-
 
 .form-group {
   width: 48%;
@@ -98,5 +92,5 @@ a {
 @media only screen and (max-width: 767px) {
  .navbar-collapse {
   background: rgb(56,64,71);
- }
+}
 }
