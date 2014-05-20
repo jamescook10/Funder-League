@@ -1,0 +1,35 @@
+@import "variables";
+
+.question {
+  border-radius: 5px;
+  margin: 20px 10px 50px;
+  background: $bg-black;
+  text-align: center;
+  p {
+    padding:15px;
+    a {text-decoration:underline;}
+  }
+  &:nth-child(1n) {
+    h3 {background: $green;}
+    box-shadow: 0 5px 0 0 lighten($green, 20%);
+  }
+  &:nth-child(2n) {
+    h3 {background: $blue;}
+    box-shadow: 0 5px 0 0 lighten($blue, 20%);
+  }
+  &:nth-child(3n) {
+    h3 {background: $purple;}
+    box-shadow: 0 5px 0 0 lighten($purple, 20%);
+  }
+  &:nth-child(4n) {
+    h3 {background: $red;}
+    box-shadow: 0 5px 0 0 lighten($red, 20%);
+  }
+  h3 {
+    padding:10px;
+    border-radius: 5px;
+  }
+  ul li:last-child {
+    padding-bottom: 20px;
+  }
+}

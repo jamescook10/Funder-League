@@ -24,7 +24,7 @@
     <h2>Funding Circle's Top Players</h2>
     <% @game_types.each do |game_type| %>
       <div class="col-sm-6">
-        <div class="league-box <%= css_case(game_type.name) %>">
+        <a href="leagues/<%=game_type.name%>"><div class="league-box <%= css_case(game_type.name) %>">
           <h2><%= game_type.name %></h2>
           <hr>
           <table>
@@ -40,7 +40,7 @@
             <% game_type.sort_players_by_win_percentage.first(3).each_with_index do |player, index| %>
               <tr>
                 <td><div class="pos"><%= index + 1 %></div></td>
-                <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span><%= player.full_name %></span></div></td>
+                <td><div class="player_name"><img src="<%= player.gravatar_image %>" class="avatar" /><span><%= player.full_name %></span></div></td>
                 <td><div><%= player.count_games_for(game_type) %></div></td> 
                 <td><div><%= player.count_wins_for(game_type) %></div></td>
                 <td><div><%= player.count_draws_for(game_type) %></div></td>
@@ -49,7 +49,7 @@
               </tr>
             <% end %>
           </table>
-        </div>
+        </div></a>
       </div>
       <% end %>    
     </div>
