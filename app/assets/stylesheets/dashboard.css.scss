@@ -18,7 +18,31 @@
 
 .game {
   background: rgba(56, 64, 71, 0.6);
-  box-shadow: 0 4px 0 0 rgba(167, 123, 182, 0.7);
+  box-shadow: 0 5px 0 0 lighten($purple, 20%);
+  &.fifa-charts{
+    h3 {
+      background: $green;
+    }
+    box-shadow: 0 5px 0 0 lighten($green, 20%);
+  }
+  &.table-tennis-charts{
+    h3 {
+      background: $red;
+    }
+    box-shadow: 0 5px 0 0 lighten($red, 20%);
+  }
+  &.pool-charts{
+    h3 {
+      background: $blue;
+    }
+    box-shadow: 0 5px 0 0 lighten($blue, 20%);
+  }
+  &.table-football-charts{
+    h3 {
+      background: $purple;
+    }
+    box-shadow: 0 5px 0 0 lighten($purple, 20%);
+  }
   border-radius: 5px;
   overflow: hidden;
   margin: 10px;
@@ -30,9 +54,9 @@
   }
   hr { border:1px solid $white; width: 50%}
   h3 {
-    background: $purple;
     margin: 0;
     padding: 10px 0 10px 30px;
+    background: $purple;
   }
   ul {
     list-style: none;
@@ -164,11 +188,16 @@
   padding-left: 0px;
   padding-right: 0px;
   height: 800px;
+  span {
+    font-size: 0.28em;
+    padding-left: 3px;
+  }
   h3 a {
     font-size:24px;
   }
   a {
     font-size:50px;
+    line-height: 30px;
     margin-top:20px;
     color: $white;
     &:hover {
@@ -193,12 +222,19 @@
   }
   .col-sm-1.side-menu {
     height: 100%;
+    a {margin-top: 0px; margin-right: 125px;}
+    .not-mobile { display:none;}
   }
   .col-sm-1.side-menu a {
-    margin-top: 0px;
+    
   }
 }
 
+@media only screen and (max-width: 411px) {
+  .col-sm-11 h1 {
+    text-align: center;
+  }
+}
 
 
 
