@@ -1,0 +1,67 @@
+<%= render 'layouts/nav' %>
+<div class="container-fluid menu-padding">
+
+  <%= render 'dashboard/side_menu' %>
+
+  <div class="col-sm-11">
+    <h1><%= current_player.possessive_form(current_player.first_name) %> Dashboard</h1>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="game new">
+          <h3>Add a result!</h3>
+
+          <%= form_for @game, html: { role: "form" } do |f| %>
+
+          <% if @game.errors.any? %>
+          <div id="error_explanation" class="alert alert-danger">
+            <h2>Oops! You've got <%= pluralize(@game.errors.count, "error") %> there player...</h2>
+            <ul>
+              <% @game.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+          <% end %>
+
+          <div class="result">
+            <div style="text-align:center;">
+              <div id="game-select"><%= f.collection_select :game_type_id, @game_types, :id, :name, { prompt: "Select Game" }, { class: "form-control" } %></div>
+
+              <div style="width:300px; margin:auto; text-align:center;">
+
+                <div class="result-box">
+                  <%= f.label :player_score, "Enter Your Score" %>
+                  <%= f.text_field :player_score, { class: "form-control" } %>
+                  <h4><%= current_player.possessive_form(current_player.full_name) %></h4>
+                </div>
+
+                <div class="vs" style="float:left;height:100px;">
+                  <h3 style="background:none">VS</h3>
+                </div>
+
+                <div class="result-box">
+
+                  <%= f.label :opponent_score, "Enter Their Score" %>
+                  <%= f.text_field :opponent_score, { class: "form-control" } %>
+
+                    
+                    <%= f.collection_select :opponent_id, @data.list_opponents, :id, :full_name, { prompt: "Select Opponent" }, { class: "form-control" } %>
+
+                </div>
+                
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <%= f.submit "Add Result" %>
+
+                <% end %>
+          </div>
+            
+
+        </div>
+      </div>
+    </div> <!-- row -->
+  </div>
+</div>
+

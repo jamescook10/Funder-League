@@ -7,6 +7,8 @@ class GamesController < ApplicationController
   end
 
   def create
+    @game_types = GameType.all
+    @data = DashboardPresenter.new(current_player)
     game_attributes = game_params
     game_attributes[:player_id] = current_player.id
     @game = Game.new(game_attributes)
@@ -20,6 +22,7 @@ class GamesController < ApplicationController
   end
 
   def edit
+    @game_types = GameType.all
     @game = current_player.games.find(params[:id])
   rescue ActiveRecord::RecordNotFound => e
     redirect_to my_games_path

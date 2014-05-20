@@ -28,7 +28,7 @@
 
             <div class="result">
               <div style="text-align:center;">
-                <div id="game-select"><%= f.collection_select :game_type_id, GameType.all, :id, :name, { prompt: "Select Game" }, { class: "form-control" } %></div>
+                <div id="game-select"><%= f.collection_select :game_type_id, @game_types, :id, :name, { prompt: "Select Game" }, { class: "form-control" } %></div>
 
 
                 <div style="width:300px; margin:auto; text-align:center;">
@@ -59,7 +59,7 @@
                 </div>
                 <div class="clearfix"></div>
               </div>
-<%= f.submit "Add Result" %>
+                  <%= f.submit "Add Result" %>
 
                   <% end %>
             </div>
