@@ -36,6 +36,26 @@ class Player < ActiveRecord::Base
     end
   end
 
+  def draw_percentage_for(game_type)
+    total = count_games_for(game_type)
+    draws = count_draws_for(game_type)
+    if draws == 0
+      0
+    else
+    (draws / total.to_f) * 100
+    end
+  end
+
+  def loss_percentage_for(game_type)
+    total = count_games_for(game_type)
+    losses = count_losses_for(game_type)
+    if losses == 0
+      0
+    else
+    (losses / total.to_f) * 100
+    end
+  end
+
   def count_games_for(game_type)
     games.where(game_type: game_type).count
   end

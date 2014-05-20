@@ -26,9 +26,9 @@
           </table>
           <h2>Nobody has played any <%= @game_type.name.downcase %> games yet!</h2>  
           <% else %>
-          <% @sorted_players.each do |player| %>
+          <% @sorted_players.each_with_index do |player, index| %>
           <tr>
-            <td><div class="pos">1.</div></td>
+            <td><div class="pos"><%= index + 1 %></div></td>
             <td><div class="player_name"><%= image_tag("avatar.png", :id => "avatar") %><span><%= player.full_name %></span></div></td>
             <td><div><%= player.count_games_for(@game_type) %></div></td> 
             <td><div><%= player.count_wins_for(@game_type) %></div></td>
