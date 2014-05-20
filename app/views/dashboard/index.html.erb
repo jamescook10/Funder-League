@@ -71,7 +71,7 @@
 
     <h2>Your Game Stats:</h2>
 
-    <div class="row" style="text-align:left;">
+    <div class="row stat" style="text-align:left;">
 
       <div class="col-md-12">
         <div class="game">
@@ -84,7 +84,7 @@
               <% end %>
             </div>
 
-            <div class="col-md-6" style="text-align:left;">
+            <div class="col-md-6 stat-align">
               <h4>Legend</h4>
               <hr>
               <ul>
@@ -102,7 +102,7 @@
 
     <% @game_types.each do |game_type| %>
 
-    <div class="row" style="text-align:left;">
+    <div class="row stat" style="text-align:left;">
 
       <div class="col-md-12">
         <div class="game <%= css_case(game_type.name) %>-charts">
@@ -112,13 +112,13 @@
 
             <div class="col-md-3" >
             </div>
-
-            <div class="col-md-5" style="text-align:left;">
+            
+            <div class="col-md-5 stat-align">
               <h2>Win % </h2>
               <hr>
               <%= content_tag "div", id: "win-percentage", data: @data.win_percentages_for_chart(game_type) do %>
-              <canvas height="250" width="250" style="float:left"></canvas>
-              <ul style="float:left"> 
+              <canvas height="250" width="250"></canvas>
+              <ul class="game-legend"> 
                 <li><span class="colorbox" style="background:<%= @data.darken_color(game_type.color, 0.8) %>;"></span><h5><%= percentage_format(current_player.win_percentage_for(game_type)) %> Wins</h5>
                 <li><span class="colorbox" style="background:<%= game_type.color %>;"></span><h5><%= percentage_format(current_player.draw_percentage_for(game_type)) %> Draws</h5> 
                 <li><span class="colorbox" style="background:<%= @data.lighten_color(game_type.color, 0.2)  %>;"></span><h5><%= percentage_format(current_player.loss_percentage_for(game_type)) %> Loses</h5>  
@@ -126,11 +126,12 @@
               <% end %>
             </div>
 
-            <div class="col-md-4" style="text-align:left;">
+            <div class="col-md-4 stat-align">
               <h2>Position In The League</h2>
               <hr>
               <h4><%= format_league_position(current_player.league_position_for(game_type)) %></h3>
             </div>
+            
 
 
           </div>

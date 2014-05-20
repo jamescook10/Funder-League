@@ -67,11 +67,27 @@
   canvas { margin: 20px 0px;}
 }
 
+.stat-align {
+  text-align: left;
+  canvas {float:left;}
+}
+.game-legend {
+  float:left;
+}
 #profile_image {
   border-radius: 50%;
   margin-left:15px; 
   margin-right:10px;
   border: 2px solid $white;
+}
+
+.col-sm-11 {
+  .stat {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 50px;
+    }
+  } 
 }
 
 .result {
@@ -187,7 +203,7 @@
 .col-sm-1.side-menu {
   padding-left: 0px;
   padding-right: 0px;
-  height: 800px;
+  height: 600px;
   span {
     font-size: 0.28em;
     padding-left: 3px;
@@ -195,6 +211,7 @@
   h3 a {
     font-size:24px;
   }
+
   a {
     font-size:50px;
     line-height: 30px;
@@ -203,12 +220,36 @@
     &:hover {
       text-decoration:none;
       color: darken($white, 20%);
-      }
-    }   
-  }
+    }
+  }   
+}
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1094px) {
   .side-menu {width:90px;}
+}
+
+@media only screen and (max-width: 991px) {
+  .game-legend {float:none;}
+  .game ul h5 {
+    margin-left: 0px;
+  }
+  .stat-align {
+    text-align: center;
+    *zoom: 1;
+    &:before,
+    &:after {
+      display: table;
+      content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+  hr {
+    display: none;
+  }
+  canvas {float:none;}
+}
 }
 
 @media only screen and (max-width: 767px) {
@@ -222,11 +263,11 @@
   }
   .col-sm-1.side-menu {
     height: 100%;
-    a {margin-top: 0px; margin-right: 125px;}
+    a {margin-top: 0px; margin-right: 25px;}
     .not-mobile { display:none;}
   }
   .col-sm-1.side-menu a {
-    
+
   }
 }
 
@@ -235,6 +276,8 @@
     text-align: center;
   }
 }
+
+
 
 
 
