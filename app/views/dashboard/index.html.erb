@@ -39,7 +39,7 @@
                     <%= f.label :player_score, "Enter Your Score" %>
                     <%= f.text_field :player_score, { class: "form-control" } %>
 
-                    <h4><%= current_player.possessive_form(current_player.full_name.capitalize) %></h4>
+                    <h4><%= current_player.full_name.split.map(&:capitalize).join(' ') %></h4>
                   </div>
 
                   <div class="vs" style="float:left;height:100px;">

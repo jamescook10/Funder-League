@@ -33,8 +33,13 @@ class DashboardPresenter
   end
 
   def list_opponents
-    opponents = Player.all
-    opponents - [@current_player]
+    players = Player.all
+    opponents = players - [@current_player]
+    opponents.each do |player|
+      player.first_name = player.first_name.capitalize
+      player.last_name = player.last_name.capitalize
+    end
+    opponents
   end
 
   def darken_color(hex_color, amount=0.4)
