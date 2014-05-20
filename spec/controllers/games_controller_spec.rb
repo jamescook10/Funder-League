@@ -16,7 +16,7 @@ describe GamesController do
     end
   end
 
-  describe "#create" do
+  describe "POST #create" do
 
     context "when a player is signed in" do
 
@@ -50,5 +50,35 @@ describe GamesController do
         expect(response).to redirect_to new_player_session_path
       end
     end
+  end
+
+  describe 'GET #edit' do
+
+    let!(:other_player) { create(:player) }
+    let!(:game) { create(:game, player_id: player.id, opponent_id: opponent.id) }
+
+    context 'when a player who played the specified game is signed in' do
+      it 'renders the Edit Game page' do
+        sign_in player
+        get :edit, id: game.id
+        expect(response).to render_template :edit
+      end
+    end
+
+    context 'when a player who didn\'t play the specified game is signed in' do
+      it 'renders the My Games page' do
+        sign_in other_player
+        get :edit, id: game.id
+        expect(response).to redirect_to my_games_path
+      end
+    end
+
+    context 'when nobody is signed in' do
+      it 'redirects to the login page' do
+        get :edit, id: game.id
+        expect(response).to redirect_to new_player_session_path
+      end
+    end
+    
   end
 end

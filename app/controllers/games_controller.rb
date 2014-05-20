@@ -20,7 +20,10 @@ class GamesController < ApplicationController
   end
 
   def edit
-    
+    @game = current_player.games.find(params[:id])
+  rescue ActiveRecord::RecordNotFound => e
+    redirect_to my_games_path
+    flash[:alert] = "Access denied sucker! You did not play this game!"
   end
 
   private
