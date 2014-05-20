@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
-  attr_accessor :player_id, :opponent_id
-  attr_writer :player_score, :opponent_score
+  attr_accessor :player_id
+  attr_writer :player_score, :opponent_score, :opponent_id
 
   belongs_to :game_type
   has_many :scores
@@ -29,6 +29,14 @@ class Game < ActiveRecord::Base
       @opponent_score
     else
       self.scores.where.not(player_id: @player_id).first.value
+    end
+  end
+
+  def opponent_id
+    if self.new_record?
+      @opponent_id
+    else
+      self.scores.where.not(player_id: @player_id).first.player.id
     end
   end
 

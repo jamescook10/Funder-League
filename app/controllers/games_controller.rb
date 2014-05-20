@@ -22,8 +22,10 @@ class GamesController < ApplicationController
   end
 
   def edit
+    @data = DashboardPresenter.new(current_player)
     @game_types = GameType.all
     @game = current_player.games.find(params[:id])
+    @game.player_id = current_player.id
   rescue ActiveRecord::RecordNotFound => e
     redirect_to my_games_path
     flash[:alert] = "Access denied sucker! You did not play this game!"
