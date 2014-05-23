@@ -45,6 +45,10 @@ group :test, :development do
   gem 'capybara-screenshot'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 gem 'chart-js-rails'
 
 ruby "2.0.0"
