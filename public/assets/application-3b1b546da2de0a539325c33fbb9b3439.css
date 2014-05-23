@@ -1,0 +1,1093 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 19, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+body {
+  font-size: 20px;
+}
+
+/* line 23, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+.menu-padding {
+  padding-top: 60px;
+}
+
+/* line 27, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+body {
+  font-family: "Ubuntu", "sans-serif";
+}
+
+/* line 31, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+h1, h2, h3, h4 {
+  font-family: "Source Sans Pro", "sans-serif";
+}
+
+/* line 35, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+form div input {
+  color: #384047;
+}
+
+/* line 39, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+.footer-wrap {
+  background: #384047;
+}
+
+/* line 43, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+#logo {
+  height: 40px;
+}
+
+/* line 47, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+#logo-sm {
+  max-width: 50px;
+  margin-top: 20px;
+}
+
+/* line 52, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+#bottom-logo {
+  text-align: center;
+  margin: 30px 0px;
+  max-width: 100%;
+}
+
+/* line 57, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+#error_explanation.alert {
+  margin: 10px;
+}
+/* line 59, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+#error_explanation.alert h3 {
+  margin-top: 0px;
+}
+/* line 62, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+#error_explanation.alert ul li {
+  font-size: 15px;
+}
+
+/* line 66, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+#sign-up, #sign-in, #sign-out, #dashboard {
+  border-radius: 2px;
+  padding: 5px 15px 5px;
+}
+
+/* line 71, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+nav #sign-up, nav #sign-in, nav #sign-out, nav #dashboard {
+  margin: 13px 10px 13px;
+}
+
+/* line 75, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+#sign-up {
+  background: #8ab67a;
+  box-shadow: 0 2px 0 0 rgba(161, 196, 148, 0.3);
+}
+
+/* line 80, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+#sign-in {
+  background: #a77bb6;
+  box-shadow: 0 2px 0 0 rgba(142, 68, 173, 0.3);
+}
+
+/* line 85, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+#dashboard {
+  background: #7989b6;
+  box-shadow: 0 2px 0 0 rgba(147, 160, 196, 0.3);
+}
+
+/* line 90, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+#sign-out {
+  background: #b67989;
+  box-shadow: 0 2px 0 0 rgba(196, 147, 160, 0.3);
+}
+
+@media only screen and (max-width: 992px) {
+  /* line 97, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+  body {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 670px) {
+  /* line 101, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+  body {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 105, /Users/jcook/Code/Funder-League/app/assets/stylesheets/application.css.scss */
+  body {
+    font-size: 12px;
+  }
+}
+/* line 3, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+.container, .container-fluid {
+  color: #fafafa;
+}
+
+/* line 7, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+body {
+  background-color: #5f666b;
+}
+
+/* line 11, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+h1 {
+  font-size: 2.5em;
+}
+
+/* line 12, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+h2 {
+  font-size: 1.75em;
+}
+
+/* line 13, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 14, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+h4 {
+  font-size: 1.25em;
+}
+
+/* line 15, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+h5 {
+  font-size: 1.1em;
+}
+
+/* line 17, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+.navbar-default {
+  background: rgba(56, 64, 71, 0.6);
+  border-color: rgba(56, 64, 71, 0.6);
+}
+
+/* line 22, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+.navbar-default .navbar-nav > li > a {
+  color: #fafafa;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* line 28, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+.navbar-brand {
+  padding: 5px;
+}
+
+/* line 32, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+.navbar {
+  border-radius: 0px;
+  margin-bottom: 0px;
+  height: 60px;
+}
+
+/* line 38, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+h3 {
+  margin-top: 10px;
+}
+
+/* line 42, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+.dropdown-menu {
+  background: #f2f2f2;
+  border: 1.5px solid #a77bb6;
+  border-radius: 5px;
+}
+/* line 46, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+.dropdown-menu li > a {
+  color: #a77bb6;
+}
+
+/* line 51, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+hr {
+  margin: 10px 0px;
+  border-top: 1px solid #555;
+}
+
+/* line 56, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
+  border: none;
+}
+
+/* line 61, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+.new_player div > input {
+  border-radius: 5px;
+  margin: 5px 0px;
+}
+
+/* line 66, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+a {
+  color: #fafafa;
+}
+/* line 68, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+a:hover, a:focus {
+  color: #8ab67a;
+  text-decoration: underline;
+}
+
+/* line 74, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+.alert, .notice {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+/* line 79, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+.form-group {
+  width: 48%;
+  float: left;
+  margin-right: 5px;
+}
+
+/* line 85, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 91, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+  .navbar-collapse {
+    background: #384047;
+  }
+
+  /* line 94, /Users/jcook/Code/Funder-League/app/assets/stylesheets/bootstrap-changes.css.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fafafa;
+  }
+}
+/* line 7, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.side-menu {
+  text-align: center;
+}
+
+/* line 11, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.colorbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  display: block;
+  float: left;
+}
+
+/* line 19, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game {
+  background: rgba(56, 64, 71, 0.6);
+  box-shadow: 0 5px 0 0 #d3bdda;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px;
+}
+/* line 22, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game.fifa-charts {
+  box-shadow: 0 5px 0 0 #c4dabc;
+}
+/* line 23, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game.fifa-charts h3 {
+  background: #8ab67a;
+}
+/* line 28, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game.table-tennis-charts {
+  box-shadow: 0 5px 0 0 #dabbc3;
+}
+/* line 29, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game.table-tennis-charts h3 {
+  background: #b67989;
+}
+/* line 34, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game.pool-charts {
+  box-shadow: 0 5px 0 0 #bbc3da;
+}
+/* line 35, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game.pool-charts h3 {
+  background: #7989b6;
+}
+/* line 40, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game.table-football-charts {
+  box-shadow: 0 5px 0 0 #d3bdda;
+}
+/* line 41, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game.table-football-charts h3 {
+  background: #a77bb6;
+}
+/* line 49, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game.new {
+  box-shadow: 0 5px 0 0 #578248;
+}
+/* line 51, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game.new h3 {
+  background: #8ab67a;
+}
+/* line 55, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game hr {
+  border: 1px solid #fafafa;
+  width: 50%;
+}
+/* line 56, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game h3 {
+  margin: 0;
+  padding: 10px 0 10px 30px;
+  background: #a77bb6;
+}
+/* line 61, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game ul {
+  list-style: none;
+}
+/* line 63, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game ul h5 {
+  margin-left: 35px;
+}
+/* line 67, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game canvas {
+  margin: 20px 0px;
+}
+
+/* line 70, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.stat-align {
+  text-align: left;
+}
+/* line 72, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.stat-align canvas {
+  float: left;
+}
+
+/* line 74, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.game-legend {
+  float: left;
+}
+
+/* line 77, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+#profile_image {
+  border-radius: 50%;
+  margin-left: 15px;
+  margin-right: 10px;
+  border: 2px solid #fafafa;
+}
+
+/* line 85, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.col-sm-11 .stat {
+  margin-bottom: 30px;
+}
+/* line 87, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.col-sm-11 .stat:last-child {
+  margin-bottom: 50px;
+}
+
+/* line 93, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result {
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+/* line 98, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result input[type="submit"] {
+  border-radius: 5px;
+  background: #fafafa;
+  box-shadow: 0 5px 0 0 #c7c7c7;
+}
+/* line 103, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result select {
+  margin-top: 20px;
+}
+/* line 106, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result #game_opponent_id {
+  margin-left: -12px;
+  width: 145px;
+}
+/* line 110, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 114, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result header {
+  margin-bottom: 20px;
+}
+/* line 116, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result header a {
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 0.8em;
+  position: relative;
+  top: -2.4em;
+}
+/* line 123, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result header a.delete-result {
+  margin-right: 20px;
+}
+/* line 129, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result.fifa {
+  background: #8ab67a;
+  box-shadow: 0 5px 0 0 #578248;
+}
+/* line 132, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result.fifa header {
+  background: #67885b;
+}
+/* line 136, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result.pool {
+  background: #7989b6;
+  box-shadow: 0 5px 0 0 #475682;
+}
+/* line 139, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result.pool h2 {
+  background: #5a6688;
+}
+/* line 143, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result.table-tennis {
+  background: #b67989;
+  box-shadow: 0 5px 0 0 #824756;
+}
+/* line 146, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result.table-tennis h2 {
+  background: #885a66;
+}
+/* line 150, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result.table-football {
+  background: #a77bb6;
+  box-shadow: 0 5px 0 0 #744883;
+}
+/* line 153, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result.table-football h2 {
+  background: #7d5c88;
+}
+
+/* line 159, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+#game-select {
+  width: 300px;
+  margin: auto;
+}
+
+/* line 164, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result-box {
+  width: 40%;
+  display: inline-block;
+  float: left;
+}
+/* line 168, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result-box h3 {
+  background: #fafafa;
+  border-radius: 5px;
+  box-shadow: 4px 4px 0px 1px rgba(220, 220, 220, 0.6);
+  font-size: 120px;
+  line-height: 0.8;
+  margin-top: 0px;
+  padding-bottom: 7px;
+  color: #384047;
+}
+/* line 178, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result-box input {
+  background: #fafafa;
+  border-radius: 5px;
+  box-shadow: 4px 4px 0px 1px rgba(220, 220, 220, 0.6);
+  color: #384047;
+  height: 100px;
+  width: 120px;
+  font-size: 75px;
+  text-align: center;
+}
+/* line 188, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.result-box h4 {
+  margin: 10px 0px;
+  border-bottom: 2px solid #fafafa;
+  font-size: 1em;
+}
+
+/* line 195, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.vs {
+  width: 20%;
+}
+/* line 197, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.vs h3 {
+  margin-top: 35px;
+  padding: 10px 0px 10px 0px;
+}
+
+/* line 203, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.col-sm-1.side-menu {
+  padding-left: 0px;
+  padding-right: 0px;
+  height: 600px;
+}
+/* line 207, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.col-sm-1.side-menu span {
+  font-size: 0.28em;
+  padding-left: 3px;
+}
+/* line 211, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.col-sm-1.side-menu h3 a {
+  font-size: 24px;
+}
+/* line 215, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.col-sm-1.side-menu a {
+  font-size: 50px;
+  line-height: 30px;
+  margin-top: 20px;
+  color: #fafafa;
+}
+/* line 220, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+.col-sm-1.side-menu a:hover {
+  text-decoration: none;
+  color: #c7c7c7;
+}
+
+@media only screen and (min-width: 1094px) {
+  /* line 228, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .side-menu {
+    width: 90px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  /* line 232, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .game-legend {
+    float: none;
+  }
+
+  /* line 233, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .game ul h5 {
+    margin-left: 0px;
+  }
+
+  /* line 236, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .stat-align {
+    text-align: center;
+    *zoom: 1;
+  }
+  /* line 240, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .stat-align:before, .stat-align:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  /* line 245, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .stat-align:after {
+    clear: both;
+  }
+  /* line 248, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .stat-align hr {
+    display: none;
+  }
+  /* line 251, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .stat-align canvas {
+    float: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 257, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .side-menu h3, .side-menu img, .side-menu a {
+    display: inline-block;
+  }
+  /* line 260, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .side-menu #logo-sm {
+    width: 60px;
+    margin-top: 0px;
+  }
+
+  /* line 264, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .col-sm-1.side-menu {
+    height: 100%;
+  }
+  /* line 266, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .col-sm-1.side-menu a {
+    margin-top: 0px;
+    margin-right: 25px;
+  }
+  /* line 267, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .col-sm-1.side-menu .not-mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 411px) {
+  /* line 275, /Users/jcook/Code/Funder-League/app/assets/stylesheets/dashboard.css.scss */
+  .col-sm-11 h1 {
+    text-align: center;
+  }
+}
+/* line 3, /Users/jcook/Code/Funder-League/app/assets/stylesheets/faq.css.scss */
+.question {
+  border-radius: 5px;
+  margin: 20px 10px 50px;
+  background: #384047;
+  text-align: center;
+}
+/* line 8, /Users/jcook/Code/Funder-League/app/assets/stylesheets/faq.css.scss */
+.question p {
+  padding: 15px;
+}
+/* line 10, /Users/jcook/Code/Funder-League/app/assets/stylesheets/faq.css.scss */
+.question p a {
+  text-decoration: underline;
+}
+/* line 12, /Users/jcook/Code/Funder-League/app/assets/stylesheets/faq.css.scss */
+.question:nth-child(1n) {
+  box-shadow: 0 5px 0 0 #c4dabc;
+}
+/* line 13, /Users/jcook/Code/Funder-League/app/assets/stylesheets/faq.css.scss */
+.question:nth-child(1n) h3 {
+  background: #8ab67a;
+}
+/* line 16, /Users/jcook/Code/Funder-League/app/assets/stylesheets/faq.css.scss */
+.question:nth-child(2n) {
+  box-shadow: 0 5px 0 0 #bbc3da;
+}
+/* line 17, /Users/jcook/Code/Funder-League/app/assets/stylesheets/faq.css.scss */
+.question:nth-child(2n) h3 {
+  background: #7989b6;
+}
+/* line 20, /Users/jcook/Code/Funder-League/app/assets/stylesheets/faq.css.scss */
+.question:nth-child(3n) {
+  box-shadow: 0 5px 0 0 #d3bdda;
+}
+/* line 21, /Users/jcook/Code/Funder-League/app/assets/stylesheets/faq.css.scss */
+.question:nth-child(3n) h3 {
+  background: #a77bb6;
+}
+/* line 24, /Users/jcook/Code/Funder-League/app/assets/stylesheets/faq.css.scss */
+.question:nth-child(4n) {
+  box-shadow: 0 5px 0 0 #dabbc3;
+}
+/* line 25, /Users/jcook/Code/Funder-League/app/assets/stylesheets/faq.css.scss */
+.question:nth-child(4n) h3 {
+  background: #b67989;
+}
+/* line 28, /Users/jcook/Code/Funder-League/app/assets/stylesheets/faq.css.scss */
+.question h3 {
+  padding: 10px;
+  border-radius: 5px;
+}
+/* line 32, /Users/jcook/Code/Funder-League/app/assets/stylesheets/faq.css.scss */
+.question ul li:last-child {
+  padding-bottom: 20px;
+}
+/* line 7, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.hero-wrap {
+  padding-bottom: 30px;
+  background: rgba(167, 123, 182, 0.4);
+  height: 100%;
+}
+/* line 11, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.hero-wrap article {
+  padding-top: 170px;
+}
+/* line 13, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.hero-wrap article h3 {
+  font-weight: 300;
+}
+
+/* line 17, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.hero2-wrap {
+  background: rgba(167, 123, 182, 0.4);
+  height: 100%;
+}
+
+/* line 22, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-wrap {
+  background: #384047;
+  height: 100%;
+}
+/* line 26, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-wrap .container a:hover, .league-wrap .container a:focus {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+/* line 33, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box {
+  border-radius: 5px;
+  margin: 60px 5px;
+  padding: 5px 10px;
+  min-width: 250px;
+  cursor: pointer;
+}
+/* line 39, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box h2 {
+  text-align: center;
+  border-radius: 5px;
+}
+/* line 43, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box table {
+  width: 100%;
+}
+/* line 45, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box table .player_name span {
+  margin-left: 5%;
+}
+/* line 48, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box table .avatar {
+  width: 30px;
+  border: 1px solid #fafafa;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+/* line 55, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box:hover {
+  -webkit-animation: pop-out 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+/* line 59, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box.fifa {
+  background: #8ab67a;
+  box-shadow: 0 5px 0 0 rgba(161, 196, 148, 0.7);
+}
+/* line 62, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box.fifa h2 {
+  background: #67885b;
+}
+/* line 66, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box.pool {
+  background: #7989b6;
+  box-shadow: 0 5px 0 0 rgba(147, 160, 196, 0.7);
+}
+/* line 69, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box.pool h2 {
+  background: #5a6688;
+}
+/* line 73, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box.table-tennis {
+  background: #b67989;
+  box-shadow: 0 5px 0 0 rgba(196, 147, 160, 0.7);
+}
+/* line 76, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box.table-tennis h2 {
+  background: #885a66;
+}
+/* line 80, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box.table-football {
+  background: #a77bb6;
+  box-shadow: 0 5px 0 0 rgba(184, 149, 196, 0.7);
+}
+/* line 83, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+.league-box.table-football h2 {
+  background: #7d5c88;
+}
+
+@-webkit-keyframes pop-out {
+  /* line 93, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+  0% {
+    -webkit-transform: scale(1, 1);
+  }
+
+  /* line 94, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+  100% {
+    -webkit-transform: scale(1.1, 1.1);
+  }
+}
+
+/* line 97, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+#hero {
+  background: url(backgrounds/table_tennis2.jpg) 0% 0 no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 700px;
+}
+
+/* line 106, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+#hero2 {
+  background: url(backgrounds/james_pool.jpg) 0% 0 no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px;
+}
+
+@media only screen and (max-width: 992px) {
+  /* line 116, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+  #hero {
+    height: 500px;
+  }
+
+  /* line 117, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+  .hero-wrap article {
+    padding-top: 100px;
+  }
+}
+@media only screen and (max-width: 670px) {
+  /* line 121, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+  #hero {
+    height: 400px;
+  }
+
+  /* line 122, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+  #hero2 {
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 126, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+  #hero {
+    height: 300px;
+  }
+
+  /* line 127, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+  #hero2 {
+    height: 300px;
+  }
+
+  /* line 128, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+  .hero-wrap article {
+    padding-top: 0px;
+  }
+
+  /* line 130, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+  .league-box h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  /* line 133, /Users/jcook/Code/Funder-League/app/assets/stylesheets/home.css.scss */
+  .league-box table .avatar {
+    display: none;
+  }
+}
+/* line 8, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league {
+  border-radius: 5px;
+  margin: 20px 10px 50px;
+}
+/* line 11, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+/* line 15, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league.fifa {
+  background: #8ab67a;
+  box-shadow: 0 5px 0 0 rgba(161, 196, 148, 0.7);
+}
+/* line 18, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league.fifa table tr th div {
+  background: #67885b;
+}
+/* line 21, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league.fifa table tr:nth-child(2n+3) {
+  background: #67885b;
+}
+/* line 25, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league.pool {
+  background: #7989b6;
+  box-shadow: 0 5px 0 0 rgba(147, 160, 196, 0.7);
+}
+/* line 28, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league.pool table tr th div {
+  background: #5a6688;
+}
+/* line 31, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league.pool table tr:nth-child(2n+3) {
+  background: #5a6688;
+}
+/* line 35, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league.table-tennis {
+  background: #b67989;
+  box-shadow: 0 5px 0 0 rgba(196, 147, 160, 0.7);
+}
+/* line 38, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league.table-tennis table tr th div {
+  background: #885a66;
+}
+/* line 41, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league.table-tennis table tr:nth-child(2n+3) {
+  background: #885a66;
+}
+/* line 45, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league.table-football {
+  background: #a77bb6;
+  box-shadow: 0 5px 0 0 rgba(184, 149, 196, 0.7);
+}
+/* line 48, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league.table-football table tr th div {
+  background: #7d5c88;
+}
+/* line 51, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league.table-football table tr:nth-child(2n+3) {
+  background: #7d5c88;
+}
+/* line 55, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league table {
+  width: 100%;
+  margin: 20px 0px;
+}
+/* line 58, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league table .pos {
+  margin: 10px 0px;
+  width: 10px;
+  padding-left: 3px;
+}
+/* line 63, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league table tr th div {
+  border-radius: 5px;
+  margin: 10px 15px;
+  text-align: center;
+  font-size: 1.4em;
+}
+/* line 69, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league table tr td div {
+  border-radius: 5px;
+  margin: 10px 15px;
+  text-align: center;
+  font-size: 1em;
+}
+/* line 74, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league table tr td div span {
+  font-size: 1.1em;
+  margin-left: 5%;
+}
+/* line 79, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league table .player_name {
+  margin-left: 5%;
+  text-align: left;
+}
+/* line 83, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league table .avatar {
+  width: 40px;
+  border: 1px solid #fafafa;
+  border-radius: 50%;
+}
+
+/* line 91, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.league-button {
+  border-radius: 5px;
+  padding: 2px 10px 10px 10px;
+  margin: 10px;
+  background: rgba(56, 64, 71, 0.8);
+}
+
+/* line 98, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+.hero-wrap2 {
+  background: rgba(56, 64, 71, 0.5);
+  height: 100%;
+}
+
+/* line 103, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+#fifa {
+  background: url(backgrounds/break_out.jpg) 0% 0 no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 110, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+#table-football {
+  background: url(backgrounds/table_football.jpg) 0% 0 no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 117, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+#table-tennis {
+  background: url(backgrounds/table_tennis.jpg) 0% 0 no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 124, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+#pool {
+  background: url(backgrounds/james_pool.jpg) 0% 0 no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 992px) {
+  /* line 135, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+  .league table .avatar {
+    width: 30px !important;
+  }
+  /* line 138, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+  .league table tr th div {
+    font-size: 1.2em;
+  }
+  /* line 140, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+  .league table tr th div span {
+    margin-left: 1%;
+  }
+}
+@media only screen and (min-width: 671px) {
+  /* line 148, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+  .mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 670px) {
+  /* line 152, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+  .league table tr th div {
+    border-radius: 0px;
+    margin: 10px 0px;
+  }
+
+  /* line 156, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+  .not-mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 159, /Users/jcook/Code/Funder-League/app/assets/stylesheets/leagues.css.scss */
+  .league table .avatar {
+    display: none;
+  }
+}
+/* line 3, /Users/jcook/Code/Funder-League/app/assets/stylesheets/rules.css.scss */
+.rules {
+  border-radius: 5px;
+  margin: 20px 10px 50px;
+}
+/* line 6, /Users/jcook/Code/Funder-League/app/assets/stylesheets/rules.css.scss */
+.rules h2 {
+  padding: 10px;
+  border-radius: 5px;
+}
+/* line 10, /Users/jcook/Code/Funder-League/app/assets/stylesheets/rules.css.scss */
+.rules ul li:last-child {
+  padding-bottom: 20px;
+}
+/* line 13, /Users/jcook/Code/Funder-League/app/assets/stylesheets/rules.css.scss */
+.rules.fifa {
+  background: #8ab67a;
+  box-shadow: 0 5px 0 0 rgba(161, 196, 148, 0.7);
+}
+/* line 16, /Users/jcook/Code/Funder-League/app/assets/stylesheets/rules.css.scss */
+.rules.fifa h2 {
+  background: #67885b;
+}
+/* line 20, /Users/jcook/Code/Funder-League/app/assets/stylesheets/rules.css.scss */
+.rules.pool {
+  background: #7989b6;
+  box-shadow: 0 5px 0 0 rgba(147, 160, 196, 0.7);
+}
+/* line 23, /Users/jcook/Code/Funder-League/app/assets/stylesheets/rules.css.scss */
+.rules.pool h2 {
+  background: #5a6688;
+}
+/* line 27, /Users/jcook/Code/Funder-League/app/assets/stylesheets/rules.css.scss */
+.rules.table-tennis {
+  background: #b67989;
+  box-shadow: 0 5px 0 0 rgba(196, 147, 160, 0.7);
+}
+/* line 30, /Users/jcook/Code/Funder-League/app/assets/stylesheets/rules.css.scss */
+.rules.table-tennis h2 {
+  background: #885a66;
+}
+/* line 34, /Users/jcook/Code/Funder-League/app/assets/stylesheets/rules.css.scss */
+.rules.table-football {
+  background: #a77bb6;
+  box-shadow: 0 5px 0 0 rgba(184, 149, 196, 0.7);
+}
+/* line 37, /Users/jcook/Code/Funder-League/app/assets/stylesheets/rules.css.scss */
+.rules.table-football h2 {
+  background: #7d5c88;
+}
+/* line 41, /Users/jcook/Code/Funder-League/app/assets/stylesheets/rules.css.scss */
+.rules ul {
+  padding-right: 15px;
+}
